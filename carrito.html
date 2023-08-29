@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carrito</title>
+    <!-- <link rel="stylesheet" href="styles/style.css"> -->
+  </head>
+  <body>
+    <header>
+      <img src="img/branding/logo_light_horizontal.svg" alt="funkoshop-logo" />
+      <nav id="nav-header">
+        <ul>
+          <li><a href="/shop.html">SHOP</a></li>
+          <li><a href="/contacto.html">CONTACTO</a></li>
+          <li><a href="/login.html">LOGIN</a></li>
+          <li>
+            <a href="/carrito.html">
+              <img src="img/icons/cart-icon.svg" alt="Carrito" />
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h1>CARRITO DE COMPRAS</h1>
+      <div class="line"></div>
+
+      <div class="carrito">
+        <span id="detalle">DETALLE DE PRODUCTO</span>
+        <span id="cantidad">CANTIDAD</span>
+        <span id="total">TOTAL</span>
+      </div>
+
+      <div class="carrito">
+        <div class="item">
+          <img src="img/star-wars/baby-yoda-1.webp" alt="Baby Yoda Blueball" />
+          <h3>BABY YODA BLUEBALL</h3>
+          <h4>STAR WARS</h4>
+          <p>precio: $1799,99</p>
+          <input type="number" />
+          <p>3599,98</p>
+          <button id="close"></button>
+        </div>
+      </div>
+      <div class="carrito">
+        <div class="item">
+          <img src="img/pokemon/pidgeotto-1.webp" alt="Pidgeotto" />
+          <h3>PIDGEOTTO</h3>
+          <h4>POKEMON</h4>
+          <p>precio: $1799,99</p>
+          <input type="number" />
+          <p>$1799,99</p>
+          <button id="close"></button>
+        </div>
+      </div>
+
+      <h2>RESUMEN</h2>
+      <div class="line"></div>
+      <div id="resumen">
+        <div><span>CANTIDAD DE ELEMENTOS</span><span>3</span></div>
+        <div><span>SUBTOTAL</span><span>$5.399,97</span></div>
+        <div><span>ENVIO</span><span>$0,00</span></div>
+        <div class="line"></div>
+        <div><span>TOTAL</span><span>$5.399,97</span></div>
+      </div>
+      <button id="pagar">IR A PAGAR</button>
+    </main>
+
+    <footer>
+      <nav id="nav-footer">
+        <ul>
+          <li><a href="/shop">SHOP</a></li>
+          <li><a href="/ingresar">INGRESAR</a></li>
+          <li><a href="/contacto">CONTACTO</a></li>
+        </ul>
+      </nav>
+      <img src="img/branding/isotype.svg" alt="Logo Funko Shop" />
+      <p>All rights reserved 2023 - Funkoshop &copy;</p>
+    </footer>
+  </body>
+</html>
