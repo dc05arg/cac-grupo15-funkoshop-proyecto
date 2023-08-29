@@ -27,43 +27,79 @@
       <h1>CARRITO DE COMPRAS</h1>
       <div class="line"></div>
 
-      <div class="carrito">
-        <span id="detalle">DETALLE DE PRODUCTO</span>
-        <span id="cantidad">CANTIDAD</span>
-        <span id="total">TOTAL</span>
+      <div class="carrito-encabezado">
+        <div id="detalle">DETALLE DE PRODUCTO</div>
+        <div id="cantidad">CANTIDAD</div>
+        <div id="total">TOTAL</div>
       </div>
 
-      <div class="carrito">
+      <div class="carrito-item">
         <div class="item">
-          <img src="img/star-wars/baby-yoda-1.webp" alt="Baby Yoda Blueball" />
-          <h3>BABY YODA BLUEBALL</h3>
-          <h4>STAR WARS</h4>
-          <p>precio: $1799,99</p>
-          <input type="number" />
-          <p>3599,98</p>
+          <div class="item-detalle">
+            <img
+              src="img/star-wars/baby-yoda-1.webp"
+              alt="Baby Yoda Blueball"
+            />
+            <div>
+              <h3>BABY YODA BLUEBALL</h3>
+              <h4>STAR WARS</h4>
+            </div>
+            <div id="item-precio-unitario">
+              <p>Precio unitario: $1799,99</p>
+            </div>
+          </div>
+          <div id="item-cantidad">
+            <input type="number" />
+          </div>
+          <div id="item-precio-total">
+            <p>$3599,98</p>
+          </div>
           <button id="close"></button>
         </div>
       </div>
-      <div class="carrito">
+
+      <div class="carrito-item">
         <div class="item">
-          <img src="img/pokemon/pidgeotto-1.webp" alt="Pidgeotto" />
-          <h3>PIDGEOTTO</h3>
-          <h4>POKEMON</h4>
-          <p>precio: $1799,99</p>
-          <input type="number" />
-          <p>$1799,99</p>
+          <div class="item-detalle">
+            <img src="img/pokemon/pidgeotto-1.webp" alt="Pidgeotto" />
+            <div>
+              <h3>PIDGEOTTO</h3>
+              <h4>POKEMON</h4>
+            </div>
+            <div id="item-precio-unitario">
+              <p>Precio unitario: $1799,99</p>
+            </div>
+          </div>
+          <div id="item-cantidad">
+            <input type="number" />
+          </div>
+          <div id="item-precio-total">
+            <p>$1799,99</p>
+          </div>
           <button id="close"></button>
         </div>
       </div>
 
       <h2>RESUMEN</h2>
       <div class="line"></div>
-      <div id="resumen">
-        <div><span>CANTIDAD DE ELEMENTOS</span><span>3</span></div>
-        <div><span>SUBTOTAL</span><span>$5.399,97</span></div>
-        <div><span>ENVIO</span><span>$0,00</span></div>
-        <div class="line"></div>
-        <div><span>TOTAL</span><span>$5.399,97</span></div>
+      <div class="resumen">
+        <div class="resumen-cantidad">
+          <div class="resumen-detalle"><p>CANTIDAD DE ELEMENTOS</p></div>
+          <div class="resumen-valor"><p>3</p></div>
+        </div>
+        <div class="resumen-subtotal">
+          <div class="resumen-detalle"><p>SUBTOTAL</p></div>
+          <div class="resumen-valor"><p>$5.399,97</p></div>
+        </div>
+        <div class="resumen-envio">
+          <div class="resumen-detalle"><p>ENVIO</p></div>
+          <div class="resumen-valor"><p>$0,00</p></div>
+        </div>
+        <div class="line-resumen"></div>
+        <div class="total-resumen">
+          <div class="total-detalle"><p>TOTAL</p></div>
+          <div class="total-valor"><p>$5.399,97</p></div>
+        </div>
       </div>
       <button id="pagar">IR A PAGAR</button>
     </main>
