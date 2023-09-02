@@ -3,24 +3,32 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- <link rel="stylesheet" href="style.css" /> -->
-    <title>HOME</title>
+    <title>HOME || FunkoShop</title>
+    <!-- <link rel="stylesheet" href="styles/style.css" /> -->
   </head>
   <body>
     <header>
-      <img
-        src="img/branding/logo_light_horizontal.svg"
-        alt="funkoshop-logo"
-      />
-      <nav id="nav-header">
+      <nav class="nav-header">
+        <a href="/index.html">
+          <img
+            src="/img/branding/logo_light_horizontal.svg"
+            alt="funkoshop-logo"
+          />
+        </a>
+
         <ul>
-          <li><a href="/shop">SHOP</a></li>
-          <li><a href="/contacto">CONTACTO</a></li>
-          <li><a href="/login">LOGIN</a></li>
-          <li><a href="/carrito"></a></li>
+          <li><a href="/shop.html">SHOP</a></li>
+          <li><a href="/contacto.html">CONTACTO</a></li>
+          <li><a href="/login.html">LOGIN</a></li>
+          <li>
+            <a href="/carrito.html">
+              <img src="/img/icons/cart-icon.svg" alt="carrito icon" />
+            </a>
+          </li>
         </ul>
       </nav>
     </header>
+
     <div id="banner">
       <img src="img/funkos-banner.webp" alt="banner-background" />
       <h2>Nuevos Ingresos</h2>
@@ -61,7 +69,10 @@
         <div class="flecha-chevron" id="der"></div>
         <div class="conteiner">
           <div class="funko-item">
-            <img src="img/star-wars/trooper-1.webp" alt="STORMTROOPER LIGHTSABER" />
+            <img
+              src="img/star-wars/trooper-1.webp"
+              alt="STORMTROOPER LIGHTSABER"
+            />
             <div class="nuevo"><p>NUEVO</p></div>
             <h5>STAR WARS</h5>
             <h6>STORMTROOPER LIGHTSABER</h6>
@@ -77,7 +88,10 @@
             <p class="cuotas">3 cuotas sin interés</p>
           </div>
           <div class="funko-item">
-            <img src="img/harry-potter/luna-1.webp" alt="LUNA LOVEGOOD LION MASK" />
+            <img
+              src="img/harry-potter/luna-1.webp"
+              alt="LUNA LOVEGOOD LION MASK"
+            />
             <div class="nuevo"><p>NUEVO</p></div>
             <h5>HARRY POTTER</h5>
             <h6>LUNA LOVEGOOD LION MASK</h6>
@@ -87,15 +101,20 @@
         </div>
       </div>
     </main>
+
     <footer>
-      <nav id="nav-footer">
+      <nav class="nav-footer">
         <ul>
           <li><a href="/shop">SHOP</a></li>
           <li><a href="/ingresar">INGRESAR</a></li>
           <li><a href="/contacto">CONTACTO</a></li>
         </ul>
+
+        <a href="/index.html">
+          <img src="/img/branding/isotype.svg" alt="funko-logo" />
+        </a>
       </nav>
-      <img src="img/branding/isotype.svg" alt="funko-logo" />
+
       <p>All rights reserved 2023 - Funkoshop &copy;</p>
     </footer>
   </body>

@@ -3,20 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Carrito</title>
+    <title>CART || FunkoShop</title>
     <!-- <link rel="stylesheet" href="styles/style.css"> -->
   </head>
   <body>
     <header>
-      <img src="img/branding/logo_light_horizontal.svg" alt="funkoshop-logo" />
-      <nav id="nav-header">
+      <nav class="nav-header">
+        <a href="/index.html">
+          <img
+            src="/img/branding/logo_light_horizontal.svg"
+            alt="funkoshop-logo"
+          />
+        </a>
+
         <ul>
           <li><a href="/shop.html">SHOP</a></li>
           <li><a href="/contacto.html">CONTACTO</a></li>
           <li><a href="/login.html">LOGIN</a></li>
           <li>
             <a href="/carrito.html">
-              <img src="img/icons/cart-icon.svg" alt="Carrito" />
+              <img src="/img/icons/cart-icon.svg" alt="carrito icon" />
             </a>
           </li>
         </ul>
@@ -25,94 +31,104 @@
 
     <main>
       <h1>CARRITO DE COMPRAS</h1>
-      <div class="line"></div>
 
-      <div class="carrito-encabezado">
-        <div id="detalle">DETALLE DE PRODUCTO</div>
-        <div id="cantidad">CANTIDAD</div>
-        <div id="total">TOTAL</div>
-      </div>
-
-      <div class="carrito-item">
-        <div class="item">
-          <div class="item-detalle">
-            <img
-              src="img/star-wars/baby-yoda-1.webp"
-              alt="Baby Yoda Blueball"
-            />
-            <div>
-              <h3>BABY YODA BLUEBALL</h3>
-              <h4>STAR WARS</h4>
-            </div>
-            <div id="item-precio-unitario">
-              <p>Precio unitario: $1799,99</p>
-            </div>
+      <section class="carrito">
+        <div class="carrito__encabezado">
+          <div class="carrito__encabezado__detalle">
+            <p>DETALLE DE PRODUCTO</p>
           </div>
-          <div id="item-cantidad">
-            <input type="number" />
+          <div class="carrito__encabezado__cantidad">
+            <p>CANTIDAD</p>
           </div>
-          <div id="item-precio-total">
-            <p>$3599,98</p>
+          <div class="carrito__encabezado__total">
+            <p>TOTAL</p>
           </div>
-          <button id="close"></button>
         </div>
-      </div>
 
-      <div class="carrito-item">
-        <div class="item">
-          <div class="item-detalle">
-            <img src="img/pokemon/pidgeotto-1.webp" alt="Pidgeotto" />
-            <div>
-              <h3>PIDGEOTTO</h3>
-              <h4>POKEMON</h4>
+        <div class="carrito__list">
+          <div class="carrito__list__item">
+            <div class="cart-item">
+              <img
+                class="cart-item__img"
+                src="img/star-wars/baby-yoda-1.webp"
+                alt="Baby Yoda Blueball"
+              />
+              <h3 class="cart-item__title">BABY YODA BLUEBALL</h3>
+              <p class="cart-item__license">STAR WARS</p>
+              <p class="cart-item__price">Precio unitario: $1799,99</p>
             </div>
-            <div id="item-precio-unitario">
-              <p>Precio unitario: $1799,99</p>
+
+            <div class="carrito__list__cantidad">
+              <input type="number" />
+            </div>
+
+            <div class="carrito__list__total">
+              <p>$3599,98</p>
             </div>
           </div>
-          <div id="item-cantidad">
-            <input type="number" />
-          </div>
-          <div id="item-precio-total">
-            <p>$1799,99</p>
-          </div>
-          <button id="close"></button>
-        </div>
-      </div>
 
-      <h2>RESUMEN</h2>
-      <div class="line"></div>
-      <div class="resumen">
-        <div class="resumen-cantidad">
-          <div class="resumen-detalle"><p>CANTIDAD DE ELEMENTOS</p></div>
-          <div class="resumen-valor"><p>3</p></div>
+          <div class="carrito__list__item">
+            <div class="cart-item">
+              <img
+                class="cart-item__img"
+                src="img/pokemon/pidgeotto-1.webp"
+                alt="Pidgeotto"
+              />
+              <h3 class="cart-item__title">PIDGEOTTO</h3>
+              <p class="cart-item__license">POKEMON</p>
+              <p class="cart-item__price">Precio unitario: $1799,99</p>
+            </div>
+
+            <div class="carrito__list__cantidad">
+              <input type="number" />
+            </div>
+
+            <div class="carrito__list__total">
+              <p>$1799,99</p>
+            </div>
+          </div>
         </div>
-        <div class="resumen-subtotal">
-          <div class="resumen-detalle"><p>SUBTOTAL</p></div>
-          <div class="resumen-valor"><p>$5.399,97</p></div>
+      </section>
+
+      <section class="resumen">
+        <h2>RESUMEN</h2>
+
+        <div class="resumen__detalle">
+          <div class="resumen__detalle__cantidad">
+            <p class="resumen__detalle__title">CANTIDAD DE ELEMENTOS</p>
+            <p class="resumen__detalle__value">3</p>
+          </div>
+          <div class="resumen__detalle__subtotal">
+            <p class="resumen__detalle__title">SUBTOTAL</p>
+            <p class="resumen__detalle__value">$5.5399,97</p>
+          </div>
+          <div class="resumen__detalle__envio">
+            <p class="resumen__detalle__title">ENVIO</p>
+            <p class="resumen__detalle__value">$0,00</p>
+          </div>
+          <div class="resumen__detalle__total">
+            <p class="resumen__detalle__title__total">TOTAL</p>
+            <p class="resumen__detalle__value__total">$5.399,97</p>
+          </div>
         </div>
-        <div class="resumen-envio">
-          <div class="resumen-detalle"><p>ENVIO</p></div>
-          <div class="resumen-valor"><p>$0,00</p></div>
-        </div>
-        <div class="line-resumen"></div>
-        <div class="total-resumen">
-          <div class="total-detalle"><p>TOTAL</p></div>
-          <div class="total-valor"><p>$5.399,97</p></div>
-        </div>
-      </div>
-      <button id="pagar">IR A PAGAR</button>
+
+        <button id="pagar">IR A PAGAR</button>
+      </section>
     </main>
 
     <footer>
-      <nav id="nav-footer">
+      <nav class="nav-footer">
         <ul>
           <li><a href="/shop">SHOP</a></li>
           <li><a href="/ingresar">INGRESAR</a></li>
           <li><a href="/contacto">CONTACTO</a></li>
         </ul>
+
+        <a href="/index.html">
+          <img src="/img/branding/isotype.svg" alt="funko-logo" />
+        </a>
       </nav>
-      <img src="img/branding/isotype.svg" alt="Logo Funko Shop" />
+
       <p>All rights reserved 2023 - Funkoshop &copy;</p>
     </footer>
   </body>

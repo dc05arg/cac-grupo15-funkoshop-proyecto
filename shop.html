@@ -1,79 +1,90 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- <title>SHOP || FunkoShop</title><link rel="stylesheet" href="styles/....."> -->
-</head>
-<body>
-  <div class="contenedor">
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SHOP || FunkoShop</title>
+    <!-- <link rel="stylesheet" href="styles/style.css"> -->
+  </head>
+  <body>
     <header>
-      <img
-        src="img/branding/logo_light_horizontal.svg"
-        alt="funkoshop-logo"
-      />
-      <nav id="nav-header">
+      <nav class="nav-header">
+        <a href="/index.html">
+          <img
+            src="/img/branding/logo_light_horizontal.svg"
+            alt="funkoshop-logo"
+          />
+        </a>
+
         <ul>
-          <li><a href="/shop">SHOP</a></li>
-          <li><a href="/contacto">CONTACTO</a></li>
-          <li><a href="/login">LOGIN</a></li>
-          <li><a href="/carrito"></a></li>
+          <li><a href="/shop.html">SHOP</a></li>
+          <li><a href="/contacto.html">CONTACTO</a></li>
+          <li><a href="/login.html">LOGIN</a></li>
+          <li>
+            <a href="/carrito.html">
+              <img src="/img/icons/cart-icon.svg" alt="carrito icon" />
+            </a>
+          </li>
         </ul>
       </nav>
     </header>
 
+    <aside>
+      <div id="search">
+        <h2>BUSCAR</h2>
+        <input
+          type="search"
+          name="buscar"
+          id="buscar"
+          placeholder="ítem o categoria"
+        />
+      </div>
+
+      <div id="order">
+        <h2>ORDENAR POR</h2>
+        <form action="" id="ordenar">
+          <select name="ordenar" id="ordenar">
+            <option value=""></option>
+            <option value="">Mayor a menor</option>
+            <option value="">Menor a mayor</option>
+            <option value="">Nuevo</option>
+          </select>
+        </form>
+      </div>
+
+      <div id="price">
+        <h2>PRECIO</h2>
+        <form action="" id="precio">
+          <label for="min">MIN</label>
+          <input type="number" name="min" id="minimo" />
+          -
+          <label for="max">MAX</label>
+          <input type="number" name="max" id="maximo" />
+        </form>
+      </div>
+
+      <div id="filter">
+        <h2>FILTRAR</h2>
+        <form action="" id="filtrar">
+          <input type="checkbox" name="nuevos" id="filtrar-nuevo" />
+          <label for="nuevos">NUEVOS</label><br />
+          <input type="checkbox" name="ofertas" id="filtrar-ofertas" />
+          <label for="ofertas">OFERTAS</label><br />
+          <input type="checkbox" name="especial" id="filtrar-especial" />
+          <label for="especial">EDICIÓN ESPECIAL</label><br />
+          <input type="checkbox" name="favoritos" id="filtrar-favoritos" />
+          <label for="favoritos">FAVORITOS</label>
+        </form>
+      </div>
+    </aside>
+
     <main>
-
-      <aside>
-        <div id="search">
-          <h2>BUSCAR</h2>
-          <input type="search" name="buscar" id="buscar" placeholder="ítem o categoria">
-        </div>
-
-        <div id="order">
-          <h2>ORDENAR POR</h2>
-          <form action="" id="ordenar">
-            <select name="ordenar" id="ordenar">
-              <option value=""></option>
-              <option value="">Mayor a menor</option>
-              <option value="">Menor a mayor</option>
-              <option value="">Nuevo</option>
-            </select>
-          </form>
-        </div>
-
-        <div id="price">
-          <h2>PRECIO</h2>
-          <form action="" id="precio"></form>
-            <label for="min">MIN</label>
-            <input type="number" name="min" id="minimo">
-            -
-            <label for="max">MAX</label>
-            <input type="number" name="max" id="maximo">
-          </form>
-        </div>
-
-        <div id="filter">
-          <h2>FILTRAR</h2>
-          <form action="" id="filtrar">
-            <input type="checkbox" name="nuevos" id="filtrar-nuevo">
-            <label for="nuevos">NUEVOS</label><br>
-            <input type="checkbox" name="ofertas" id="filtrar-ofertas">
-            <label for="ofertas">OFERTAS</label><br>
-            <input type="checkbox" name="especial" id="filtrar-especial">
-            <label for="especial">EDICIÓN ESPECIAL</label><br>
-            <input type="checkbox" name="favoritos" id="filtrar-favoritos">
-            <label for="favoritos">FAVORITOS</label>
-          </form>
-        </div>
-
-      </aside>
-
       <div id="funko-group">
-
         <div class="funko-item">
-          <img src="img/star-wars/trooper-1.webp" alt="STORMTROOPER LIGHTSABER" />
+          <img
+            src="img/star-wars/trooper-1.webp"
+            alt="STORMTROOPER LIGHTSABER"
+          />
           <div class="nuevo"><p>NUEVO</p></div>
           <h5>STAR WARS</h5>
           <h6>STORMTROOPER LIGHTSABER</h6>
@@ -91,7 +102,10 @@
         </div>
 
         <div class="funko-item">
-          <img src="img/harry-potter/luna-1.webp" alt="LUNA LOVEGOOD LION MASK" />
+          <img
+            src="img/harry-potter/luna-1.webp"
+            alt="LUNA LOVEGOOD LION MASK"
+          />
           <div class="nuevo"><p>NUEVO</p></div>
           <h5>HARRY POTTER</h5>
           <h6>LUNA LOVEGOOD LION MASK</h6>
@@ -100,7 +114,10 @@
         </div>
 
         <div class="funko-item">
-          <img src="img/star-wars/trooper-1.webp" alt="STORMTROOPER LIGHTSABER" />
+          <img
+            src="img/star-wars/trooper-1.webp"
+            alt="STORMTROOPER LIGHTSABER"
+          />
           <div class="nuevo"><p>NUEVO</p></div>
           <h5>STAR WARS</h5>
           <h6>STORMTROOPER LIGHTSABER</h6>
@@ -118,7 +135,10 @@
         </div>
 
         <div class="funko-item">
-          <img src="img/harry-potter/luna-1.webp" alt="LUNA LOVEGOOD LION MASK" />
+          <img
+            src="img/harry-potter/luna-1.webp"
+            alt="LUNA LOVEGOOD LION MASK"
+          />
           <div class="nuevo"><p>NUEVO</p></div>
           <h5>HARRY POTTER</h5>
           <h6>LUNA LOVEGOOD LION MASK</h6>
@@ -127,7 +147,10 @@
         </div>
 
         <div class="funko-item">
-          <img src="img/star-wars/trooper-1.webp" alt="STORMTROOPER LIGHTSABER" />
+          <img
+            src="img/star-wars/trooper-1.webp"
+            alt="STORMTROOPER LIGHTSABER"
+          />
           <div class="nuevo"><p>NUEVO</p></div>
           <h5>STAR WARS</h5>
           <h6>STORMTROOPER LIGHTSABER</h6>
@@ -145,7 +168,10 @@
         </div>
 
         <div class="funko-item">
-          <img src="img/harry-potter/luna-1.webp" alt="LUNA LOVEGOOD LION MASK" />
+          <img
+            src="img/harry-potter/luna-1.webp"
+            alt="LUNA LOVEGOOD LION MASK"
+          />
           <div class="nuevo"><p>NUEVO</p></div>
           <h5>HARRY POTTER</h5>
           <h6>LUNA LOVEGOOD LION MASK</h6>
@@ -155,29 +181,30 @@
 
         <div id="next-prev">
           <div class="flecha-chevron" id="izq"></div>
-            <a href="#">1</a>
-            <a href="#">2</a>
-            <a href="#">...</a>
-            <a href="#">6</a>
-            <a href="#">7</a>
+          <a href="#">1</a>
+          <a href="#">2</a>
+          <a href="#">...</a>
+          <a href="#">6</a>
+          <a href="#">7</a>
           <div class="flecha-chevron" id="der"></div>
         </div>
       </div>
+    </main>
 
-  </div>
+    <footer>
+      <nav class="nav-footer">
+        <ul>
+          <li><a href="/shop">SHOP</a></li>
+          <li><a href="/ingresar">INGRESAR</a></li>
+          <li><a href="/contacto">CONTACTO</a></li>
+        </ul>
 
-  </main>
-  <footer>
-    <nav id="nav-footer">
-      <ul>
-        <li><a href="/shop">SHOP</a></li>
-        <li><a href="/ingresar">INGRESAR</a></li>
-        <li><a href="/contacto">CONTACTO</a></li>
-      </ul>
-    </nav>
-    <img src="img/branding/isotype.svg" alt="funko-logo" />
-    <p>All rights reserved 2023 - Funkoshop &copy;</p>
-  </footer>
-  
-</body>
+        <a href="/index.html">
+          <img src="/img/branding/isotype.svg" alt="funko-logo" />
+        </a>
+      </nav>
+
+      <p>All rights reserved 2023 - Funkoshop &copy;</p>
+    </footer>
+  </body>
 </html>
