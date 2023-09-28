@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Montserrat:wght@300;500&family=Raleway:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap");
     </style>
@@ -11,16 +11,59 @@
   </head>
   <body>
     <header>
-      <div id="header-content">
+      <div class="header-content">
         <img
-          id="funkoshop-logo"
+          class="funkoshop-logo"
           src="img/branding/logo_light_horizontal.svg"
           alt="funkoshop-logo"
         />
-        <nav id="nav-header">
+        <nav class="nav-header">
+          <svg
+            class="menu-icon"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+          >
+            <g
+              fill="none"
+              stroke="currentColor"
+              stroke-dasharray="24"
+              stroke-dashoffset="24"
+              stroke-linecap="round"
+              stroke-width="2"
+            >
+              <path d="M5 5H19">
+                <animate
+                  fill="freeze"
+                  attributeName="stroke-dashoffset"
+                  dur="0.2s"
+                  values="24;0"
+                />
+              </path>
+              <path d="M5 12H19">
+                <animate
+                  fill="freeze"
+                  attributeName="stroke-dashoffset"
+                  begin="0.2s"
+                  dur="0.2s"
+                  values="24;0"
+                />
+              </path>
+              <path d="M5 19H19">
+                <animate
+                  fill="freeze"
+                  attributeName="stroke-dashoffset"
+                  begin="0.4s"
+                  dur="0.2s"
+                  values="24;0"
+                />
+              </path>
+            </g>
+          </svg>
           <ul>
             <li>
-              <a href="/shop">
+              <a class="nvha" href="/shop">
                 SHOP
                 <i class="chevron-shop">
                   <svg
@@ -39,11 +82,15 @@
                 </i>
               </a>
             </li>
-            <li><a href="/contacto">CONTACTO</a></li>
-            <li><a href="/login">LOGIN</a></li>
+            <li><a class="nvha" href="/contacto">CONTACTO</a></li>
+            <li><a class="nvha" href="/login">LOGIN</a></li>
             <li>
-              <a href="./carrito.html"
-                ><img id="cart-icon" src="img/icons/cart-icon.svg" alt="cart" />
+              <a class="nvha" href="/carrito">
+                <img
+                  class="cart-icon"
+                  src="img/icons/cart-icon.svg"
+                  alt="cart"
+                />
               </a>
             </li>
           </ul>
@@ -51,11 +98,13 @@
       </div>
     </header>
 
-    <div id="banner">
-      <img id="banner-img" src="img/funkos-banner.webp" alt="banner funkos" />
-      <h2>Nuevos Ingresos</h2>
-      <p id="slogan">Descubrí el próximo Funko Pop de tu colección</p>
-      <button id="btn-shop">SHOP</button>
+    <div class="banner">
+      <div class="banner-img"></div>
+      <div class="banner-content">
+        <h2>Nuevos Ingresos</h2>
+        <p class="slogan">Descubrí el próximo Funko Pop de tu colección</p>
+        <button class="btn-shop">SHOP</button>
+      </div>
     </div>
 
     <main>
@@ -68,9 +117,9 @@
               colección.
             </p>
             <div class="line"></div>
-            <button class="ver-btn">
-              <a class="a-ver" href="">VER COLECCIÓN</a>
-            </button>
+            <a class="a-ver" href="">
+              <button class="ver-btn">VER COLECCIÓN</button>
+            </a>
           </div>
           <div class="section-b">
             <img
@@ -88,9 +137,9 @@
               llena de amigos.
             </p>
             <div class="line"></div>
-            <button class="ver-btn">
-              <a class="a-ver" href="">VER COLECCIÓN</a>
-            </button>
+            <a class="a-ver" href="">
+              <button class="ver-btn">VER COLECCIÓN</button>
+            </a>
           </div>
           <div class="section-b">
             <img
@@ -107,9 +156,9 @@
               Revive los recuerdos de una saga llena<br />de magia y encanto.
             </p>
             <div class="line"></div>
-            <button class="ver-btn">
-              <a class="a-ver" href="">VER COLECCIÓN</a>
-            </button>
+            <a class="a-ver" href="">
+              <button class="ver-btn">VER COLECCIÓN</button>
+            </a>
           </div>
           <div class="section-b">
             <img
@@ -201,9 +250,9 @@
     <footer>
       <nav id="nav-footer">
         <ul class="nav-f-u">
-          <li class="nav-f-i"><a href="/shop">SHOP</a></li>
-          <li class="nav-f-i"><a href="/ingresar">INGRESAR</a></li>
-          <li class="nav-f-i"><a href="/contacto">CONTACTO</a></li>
+          <li class="nav-f-i"><a class="nvha" href="/shop">SHOP</a></li>
+          <li class="nav-f-i"><a class="nvha" href="/ingresar">INGRESAR</a></li>
+          <li class="nav-f-i"><a class="nvha" href="/contacto">CONTACTO</a></li>
         </ul>
       </nav>
       <img src="img/branding/isotype.svg" alt="funko-logo" class="isotype" />
