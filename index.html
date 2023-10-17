@@ -1,264 +1,191 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./styles/style.css" />
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Montserrat:wght@300;500&family=Raleway:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap");
-    </style>
-    <title>HOME</title>
-  </head>
-  <body>
-    <header>
-      <div class="header-content">
-        <img
-          class="funkoshop-logo"
-          src="img/branding/logo_light_horizontal.svg"
-          alt="funkoshop-logo"
-        />
-        <nav class="nav-header">
-          <svg
-            class="menu-icon"
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-          >
-            <g
-              fill="none"
-              stroke="currentColor"
-              stroke-dasharray="24"
-              stroke-dashoffset="24"
-              stroke-linecap="round"
-              stroke-width="2"
-            >
-              <path d="M5 5H19">
-                <animate
-                  fill="freeze"
-                  attributeName="stroke-dashoffset"
-                  dur="0.2s"
-                  values="24;0"
-                />
-              </path>
-              <path d="M5 12H19">
-                <animate
-                  fill="freeze"
-                  attributeName="stroke-dashoffset"
-                  begin="0.2s"
-                  dur="0.2s"
-                  values="24;0"
-                />
-              </path>
-              <path d="M5 19H19">
-                <animate
-                  fill="freeze"
-                  attributeName="stroke-dashoffset"
-                  begin="0.4s"
-                  dur="0.2s"
-                  values="24;0"
-                />
-              </path>
-            </g>
-          </svg>
-          <ul>
-            <li>
-              <a class="nvha" href="/shop">
-                SHOP
-                <i class="chevron-shop">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="28"
-                    height="28"
-                    viewBox="0 0 28 28"
-                  >
-                    <g transform="rotate(180 14 14)">
-                      <path
-                        fill="currentColor"
-                        d="M23.707 18.707a1 1 0 0 1-1.414 0L14 10.414l-8.293 8.293a1 1 0 0 1-1.414-1.414l9-9a1 1 0 0 1 1.414 0l9 9a1 1 0 0 1 0 1.414Z"
-                      />
-                    </g>
-                  </svg>
-                </i>
-              </a>
-            </li>
-            <li><a class="nvha" href="/contacto">CONTACTO</a></li>
-            <li><a class="nvha" href="/login">LOGIN</a></li>
-            <li>
-              <a class="nvha" href="/carrito">
-                <img
-                  class="cart-icon"
-                  src="img/icons/cart-icon.svg"
-                  alt="cart"
-                />
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </header>
 
-    <div class="banner">
-      <div class="banner-img"></div>
-      <div class="banner-content">
-        <h2>Nuevos Ingresos</h2>
-        <p class="slogan">Descubrí el próximo Funko Pop de tu colección</p>
-        <button class="btn-shop">SHOP</button>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./styles/style.css" />
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Montserrat:wght@300;500&family=Raleway:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap");
+  </style>
+  <title>HOME</title>
+</head>
+
+<body>
+  <header>
+    <div class="header-content">
+      <img class="funkoshop-logo" src="img/branding/logo_light_horizontal.svg" alt="funkoshop-logo" />
+      <nav class="nav-header">
+        <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+          <g fill="none" stroke="currentColor" stroke-dasharray="24" stroke-dashoffset="24" stroke-linecap="round"
+            stroke-width="2">
+            <path d="M5 5H19">
+              <animate fill="freeze" attributeName="stroke-dashoffset" dur="0.2s" values="24;0" />
+            </path>
+            <path d="M5 12H19">
+              <animate fill="freeze" attributeName="stroke-dashoffset" begin="0.2s" dur="0.2s" values="24;0" />
+            </path>
+            <path d="M5 19H19">
+              <animate fill="freeze" attributeName="stroke-dashoffset" begin="0.4s" dur="0.2s" values="24;0" />
+            </path>
+          </g>
+        </svg>
+        <ul>
+          <li>
+            <a class="nvha" href="/shop.html">
+              SHOP
+              <i class="chevron-shop">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28">
+                  <g transform="rotate(180 14 14)">
+                    <path fill="currentColor"
+                      d="M23.707 18.707a1 1 0 0 1-1.414 0L14 10.414l-8.293 8.293a1 1 0 0 1-1.414-1.414l9-9a1 1 0 0 1 1.414 0l9 9a1 1 0 0 1 0 1.414Z" />
+                  </g>
+                </svg>
+              </i>
+            </a>
+          </li>
+          <li><a class="nvha" href="/contacto.html">CONTACTO</a></li>
+          <li><a class="nvha" href="/login.html">LOGIN</a></li>
+          <li>
+            <a class="nvha" href="/carrito.html">
+              <img class="cart-icon" src="img/icons/cart-icon.svg" alt="cart" />
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="banner">
+    <div class="banner-img"></div>
+    <div class="banner-content">
+      <h2>Nuevos Ingresos</h2>
+      <p class="slogan">Descubrí el próximo Funko Pop de tu colección</p>
+      <button class="btn-shop">SHOP</button>
+    </div>
+  </div>
+
+  <main>
+    <div class="colec-conteiner">
+      <div id="star-wars" class="colecciones ab">
+        <div class="section-a">
+          <h3>STAR WARS & <br />THE MANDALORIAN</h3>
+          <p>
+            Disfruta de una saga que sigue <br />agregando personajes de su
+            colección.
+          </p>
+          <div class="line"></div>
+          <a class="a-ver" href="">
+            <button class="ver-btn">VER COLECCIÓN</button>
+          </a>
+        </div>
+        <div class="section-b">
+          <img src="img/star-wars/baby-yoda-1.webp" alt="baby yoda" class="colec-img" />
+        </div>
+      </div>
+      <div id="pokemon" class="colecciones ba">
+        <div class="section-a">
+          <h3>POKEMON INDIGO</h3>
+          <p>
+            Atrapa todos los que puedas y disfruta <br />de una colección
+            llena de amigos.
+          </p>
+          <div class="line"></div>
+          <a class="a-ver" href="">
+            <button class="ver-btn">VER COLECCIÓN</button>
+          </a>
+        </div>
+        <div class="section-b">
+          <img src="img/pokemon/vulpix-1.webp" alt="vulpix" class="colec-img" />
+        </div>
+      </div>
+      <div id="harry-potter" class="colecciones ab">
+        <div class="section-a">
+          <h3>HARRY POTTER</h3>
+          <p>
+            Revive los recuerdos de una saga llena<br />de magia y encanto.
+          </p>
+          <div class="line"></div>
+          <a class="a-ver" href="">
+            <button class="ver-btn">VER COLECCIÓN</button>
+          </a>
+        </div>
+        <div class="section-b">
+          <img src="img/harry-potter/snape-patronus-1.webp" alt="snape patronus" class="colec-img" />
+        </div>
       </div>
     </div>
 
-    <main>
-      <div class="colec-conteiner">
-        <div id="star-wars" class="colecciones ab">
-          <div class="section-a">
-            <h3>STAR WARS & <br />THE MANDALORIAN</h3>
-            <p>
-              Disfruta de una saga que sigue <br />agregando personajes de su
-              colección.
-            </p>
-            <div class="line"></div>
-            <a class="a-ver" href="">
-              <button class="ver-btn">VER COLECCIÓN</button>
-            </a>
+    <div class="lanzamientos">
+      <h4>ULTIMOS LANZAMIENTOS</h4>
+      <div class="chevron izq">
+        <i>
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28">
+            <g transform="rotate(-90 14 14)">
+              <path fill="currentColor"
+                d="M23.707 18.707a1 1 0 0 1-1.414 0L14 10.414l-8.293 8.293a1 1 0 0 1-1.414-1.414l9-9a1 1 0 0 1 1.414 0l9 9a1 1 0 0 1 0 1.414Z" />
+            </g>
+          </svg>
+        </i>
+      </div>
+      <div class="chevron der">
+        <i>
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28">
+            <g transform="rotate(90 14 14)">
+              <path fill="currentColor"
+                d="M23.707 18.707a1 1 0 0 1-1.414 0L14 10.414l-8.293 8.293a1 1 0 0 1-1.414-1.414l9-9a1 1 0 0 1 1.414 0l9 9a1 1 0 0 1 0 1.414Z" />
+            </g>
+          </svg>
+        </i>
+      </div>
+      <div class="lanz-container">
+        <div class="funko-item">
+          <img src="img/star-wars/trooper-1.webp" alt="STORMTROOPER LIGHTSABER" class="lanz-img" />
+          <div class="nuevo">
+            <p class="nuevo">NUEVO</p>
           </div>
-          <div class="section-b">
-            <img
-              src="img/star-wars/baby-yoda-1.webp"
-              alt="baby yoda"
-              class="colec-img"
-            />
-          </div>
+          <h5>STAR WARS</h5>
+          <h6>STORMTROOPER LIGHTSABER</h6>
+          <p class="price">$ 1799,99</p>
+          <p class="cuotas">3 cuotas sin interés</p>
         </div>
-        <div id="pokemon" class="colecciones ba">
-          <div class="section-a">
-            <h3>POKEMON INDIGO</h3>
-            <p>
-              Atrapa todos los que puedas y disfruta <br />de una colección
-              llena de amigos.
-            </p>
-            <div class="line"></div>
-            <a class="a-ver" href="">
-              <button class="ver-btn">VER COLECCIÓN</button>
-            </a>
+        <div class="funko-item">
+          <img src="img/pokemon/pidgeotto-1.webp" alt="PIDGEOTTO" class="lanz-img" />
+          <div class="nuevo">
+            <p class="nuevo">NUEVO</p>
           </div>
-          <div class="section-b">
-            <img
-              src="img/pokemon/vulpix-1.webp"
-              alt="vulpix"
-              class="colec-img"
-            />
-          </div>
+          <h5>POKEMON</h5>
+          <h6>PIDGEOTTO</h6>
+          <p class="price">$ 1799,99</p>
+          <p class="cuotas">3 cuotas sin interés</p>
         </div>
-        <div id="harry-potter" class="colecciones ab">
-          <div class="section-a">
-            <h3>HARRY POTTER</h3>
-            <p>
-              Revive los recuerdos de una saga llena<br />de magia y encanto.
-            </p>
-            <div class="line"></div>
-            <a class="a-ver" href="">
-              <button class="ver-btn">VER COLECCIÓN</button>
-            </a>
+        <div class="funko-item">
+          <img src="img/harry-potter/luna-1.webp" alt="LUNA LOVEGOOD LION MASK" class="lanz-img" />
+          <div class="nuevo">
+            <p class="nuevo">NUEVO</p>
           </div>
-          <div class="section-b">
-            <img
-              src="img/harry-potter/snape-patronus-1.webp"
-              alt="snape patronus"
-              class="colec-img"
-            />
-          </div>
+          <h5>HARRY POTTER</h5>
+          <h6>LUNA LOVEGOOD LION MASK</h6>
+          <p class="price">$ 1799,99</p>
+          <p class="cuotas">3 cuotas sin interés</p>
         </div>
       </div>
+    </div>
+  </main>
 
-      <div class="lanzamientos">
-        <h4>ULTIMOS LANZAMIENTOS</h4>
-        <div class="chevron izq">
-          <i>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="28"
-              height="28"
-              viewBox="0 0 28 28"
-            >
-              <g transform="rotate(-90 14 14)">
-                <path
-                  fill="currentColor"
-                  d="M23.707 18.707a1 1 0 0 1-1.414 0L14 10.414l-8.293 8.293a1 1 0 0 1-1.414-1.414l9-9a1 1 0 0 1 1.414 0l9 9a1 1 0 0 1 0 1.414Z"
-                />
-              </g>
-            </svg>
-          </i>
-        </div>
-        <div class="chevron der">
-          <i>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="28"
-              height="28"
-              viewBox="0 0 28 28"
-            >
-              <g transform="rotate(90 14 14)">
-                <path
-                  fill="currentColor"
-                  d="M23.707 18.707a1 1 0 0 1-1.414 0L14 10.414l-8.293 8.293a1 1 0 0 1-1.414-1.414l9-9a1 1 0 0 1 1.414 0l9 9a1 1 0 0 1 0 1.414Z"
-                />
-              </g>
-            </svg>
-          </i>
-        </div>
-        <div class="lanz-container">
-          <div class="funko-item">
-            <img
-              src="img/star-wars/trooper-1.webp"
-              alt="STORMTROOPER LIGHTSABER"
-              class="lanz-img"
-            />
-            <div class="nuevo"><p class="nuevo">NUEVO</p></div>
-            <h5>STAR WARS</h5>
-            <h6>STORMTROOPER LIGHTSABER</h6>
-            <p class="price">$ 1799,99</p>
-            <p class="cuotas">3 cuotas sin interés</p>
-          </div>
-          <div class="funko-item">
-            <img
-              src="img/pokemon/pidgeotto-1.webp"
-              alt="PIDGEOTTO"
-              class="lanz-img"
-            />
-            <div class="nuevo"><p class="nuevo">NUEVO</p></div>
-            <h5>POKEMON</h5>
-            <h6>PIDGEOTTO</h6>
-            <p class="price">$ 1799,99</p>
-            <p class="cuotas">3 cuotas sin interés</p>
-          </div>
-          <div class="funko-item">
-            <img
-              src="img/harry-potter/luna-1.webp"
-              alt="LUNA LOVEGOOD LION MASK"
-              class="lanz-img"
-            />
-            <div class="nuevo"><p class="nuevo">NUEVO</p></div>
-            <h5>HARRY POTTER</h5>
-            <h6>LUNA LOVEGOOD LION MASK</h6>
-            <p class="price">$ 1799,99</p>
-            <p class="cuotas">3 cuotas sin interés</p>
-          </div>
-        </div>
-      </div>
-    </main>
+  <footer>
+    <nav id="nav-footer">
+      <ul class="nav-f-u">
+        <li class="nav-f-i"><a class="nvha" href="/shop">SHOP</a></li>
+        <li class="nav-f-i"><a class="nvha" href="/ingresar">INGRESAR</a></li>
+        <li class="nav-f-i"><a class="nvha" href="/contacto">CONTACTO</a></li>
+      </ul>
+    </nav>
+    <img src="img/branding/isotype.svg" alt="funko-logo" class="isotype" />
+    <div class="copyrightdiv">
+      <p class="copyright">All rights reserved 2023 - Funkoshop &copy;</p>
+    </div>
+  </footer>
+</body>
 
-    <footer>
-      <nav id="nav-footer">
-        <ul class="nav-f-u">
-          <li class="nav-f-i"><a class="nvha" href="/shop">SHOP</a></li>
-          <li class="nav-f-i"><a class="nvha" href="/ingresar">INGRESAR</a></li>
-          <li class="nav-f-i"><a class="nvha" href="/contacto">CONTACTO</a></li>
-        </ul>
-      </nav>
-      <img src="img/branding/isotype.svg" alt="funko-logo" class="isotype" />
-      <div class="copyrightdiv">
-        <p class="copyright">All rights reserved 2023 - Funkoshop &copy;</p>
-      </div>
-    </footer>
-  </body>
 </html>
