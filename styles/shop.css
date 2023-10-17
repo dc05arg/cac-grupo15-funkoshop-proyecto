@@ -1,0 +1,421 @@
+/* Se importan Fuentes de Google Fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap');
+
+/* Se crean Variables */
+
+:root {
+
+  /* colors */
+  --primary-solid: #FF3333; 
+  --primary-90: rgba(255, 51, 51, 0.9);
+  --primary-50: rgba(255, 51, 51, 0.5);
+  --primary-30: rgba(255, 51, 51, 0.3);
+
+  --secondary-solid: #1D84B5;
+  --secondary_90: rgba(29, 132, 181, 0.9);
+  --secondary_60: rgba(29, 132, 181, 0.6);
+  --secondary_30: rgba(29, 132, 181, 0.3);
+
+  --dark-solid: #1F1F1F;
+  --dark_90: rgba(31, 31, 31, 0.9);
+  --dark_60: rgba(31, 31, 31, 0.6);
+  --dark_30: rgba(31, 31, 31, 0.3);
+
+  /* Grey para background */
+  --grey-solid: #30343F;
+  --grey_90: rgba(48, 52, 63, 0.9);
+  --grey_60: rgba(48, 52, 63, 0.6);
+  --grey_30: rgba(48, 52, 63, 0.3);
+
+  /* White para background */
+  --white-solid: #FAFAFF;
+
+  /* Pure White para Fonts */
+  --white-font: #FFFFFF;
+
+  /* Pink */
+  --pink-solid: #FF1654;
+  --pink-90: rgba(255, 22, 84, 0.9);
+  --pink-60: rgba(255, 22, 84, 0.6);
+  --pink-30: rgba(255, 22, 84, 0.3);
+
+  /* Typographies */
+  --principal-font: 'Inter', sans-serif;
+  --secondary-font: 'Raleway', sans-serif;
+
+  /* Font-sizes */
+  --font-46: 4.6em;
+  --font-38: 3.8em;
+  --font-30: 3em;
+  --font-24: 2.4em;
+  --font-20: 2.0em;
+  --font-18: 1.8em;
+  --font-16: 1.6em;
+  --font-14: 1.4em;
+
+  /* Spacings */
+  --spacing-128: 12.8rem;
+  --spacing-68: 6.8rem;
+  --spacing-36: 3.6rem;
+  --spacing-28: 2.8rem;
+  --spacing-24: 2.4rem;
+  --spacing-20: 2rem;
+  --spacing-18: 1.8rem;
+  --spacing-16: 1.6rem;
+  --spacing-12: 1.2rem;
+  --spacing-8: 0.8rem;
+
+}
+
+/* ------------ NORMALIZADO --------------- */
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* ------------ TIPOGRAFÍAS --------------- */
+
+html {
+  font-size: 62.5%; /* esto hace que 1 rem o 1 em sea 10px */
+  color: var(--dark-solid);
+  font-family: var(--principal-font);
+}
+
+a {
+  text-decoration: none;
+  font-family: inherit;
+  color: inherit;
+}
+
+header, footer {
+  color: var(--white-font);
+  font-family: var(--secondary-font);
+}
+
+ul, ol {
+  list-style: none;
+}
+
+/* ------------------------------- */
+
+.container {
+  max-width: 1200px; /* En todas la páginas para estandarizar el ancho */
+  margin: 0 auto;
+}
+
+div > a > picture > img {
+  width: 100%; /* Esto mantiene el 100% del ancho de su contenedor padre */
+}
+
+/* -------------------------------- */
+
+/* HEADER */
+
+header {
+  background-color: var(--grey-solid);
+  padding: var(--spacing-36);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar__logo {
+  max-width: 30rem; /* la img siempre ocupa 30rem(=300px) sin importar el tamaño de la pagina web */
+}
+
+.navbar__menu {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-20);
+}
+
+.navbar__link {
+  font-size: var(--font-20);
+  padding: var(--spacing-8) var(--spacing-16);
+  display: inline-block;
+  transition: background .2s ease-in-out;
+  position: relative;
+}
+
+.navbar__link:hover {
+  background-color: var(--primary-90);
+}
+
+/* Down Chevron y Sub-menu Desplegable */
+
+.down-icon-chevron {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-8);
+}
+
+.with-submenu:hover .submenu {
+  display: block;
+}
+
+.submenu {
+  display: none;
+  width: 30rem;
+  position: absolute;
+  background-color: var(--grey-solid);
+}
+
+.submenu__link {
+  display: block;
+  padding: var(--spacing-8) var(--spacing-16);
+  font-size: var(--font-20);
+}
+
+.submenu__link:hover {
+  background-color: var(--primary-90);
+  transition: background .2s ease-in-out;
+}
+
+/* -------------------------------- */
+
+/* MAIN */
+
+.main { /* coloco el div principal al lado del aside */
+  /* display: flex; */
+  /* o se puede usar grid */
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  padding: var(--spacing-36) 0;
+}
+
+
+/* -- Aside --*/
+
+.main-aside {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-aside > div > h2 {
+  font-size: var(--font-24);
+  font-weight: 500;
+  margin-bottom: var(--spacing-8);
+}
+
+.aside-search, .aside-order, .aside-price {
+  margin-bottom: var(--spacing-18);
+}
+
+.aside-search__input, .aside-order__form-select {
+  width: 100%;
+  height: 3.5rem;
+}
+
+.aside-price__label {
+  font-size: var(--font-16);
+  font-weight: 500;
+}
+
+.aside-price__form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.aside-price__min-max {
+  width: 4.8rem;
+  height: 2.5rem;
+}
+
+.aside-filter__label {
+  font-size: var(--font-18);
+  font-weight: 500;
+}
+
+.aside-filter__form > input {
+  margin-left: var(--spacing-16);
+} 
+
+input, select {
+  border: .2rem solid var(--grey_60);
+  border-radius: .4rem;
+}
+
+
+/* -- Main Funko Group -- */
+
+.main-funko{
+  margin-left: 1rem;
+}
+
+.main-funko-group {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  row-gap: var(--spacing-36);
+  column-gap: var(--spacing-24);
+}
+
+.funko-item__img {
+  position: relative;
+  display: flex;
+}
+
+.funko-item__promo-tag {
+  font-size: var(--font-14);
+  text-transform: uppercase;
+  background-color: var(--primary-solid);
+  color: var(--white-font);
+  padding: var(--spacing-8) var(--spacing-12);
+  position: absolute; /* se compacta, pasa de elemento de bloque a elemento de línea */
+  right: 0; /* esto hace que quede a la derecha porque toma el body como padre entonces en .funko-item__img le agregamos un position relative */
+}
+
+/* -- La transición no funciona  */
+/* .funko-item__img > img {
+  transition: 2s ease-in-out;
+} */
+
+.funko-item__img > img {
+  animation: fade .8s;
+}
+
+.funko-item__back-img {
+  display: none;
+}
+
+.funko-item__img:hover .funko-item__back-img {
+  display: block;
+}
+
+.funko-item__img:hover .funko-item__front-img {
+  display: none;
+}
+
+.funko-item__info {
+  /* display: flex;
+  flex-direction: column; */
+  /* o se puede usar grid */
+  display: grid;
+  gap: var(--spacing-12);
+  padding: var(--spacing-16);
+}
+
+.funko-item__license {
+  font-size: var(--font-14);
+  font-weight: 500;
+}
+
+.funko-item__model {
+  font-size: var(--font-18);
+  font-weight: 700;
+}
+
+.funko-item__price {
+  font-size: var(--font-16);
+}
+
+.funko-item__financing {
+  font-size: var(--font-14);
+  color: var(--secondary-solid);
+  font-weight: 700;
+}
+
+/* -------------------------------- */
+
+
+/* CHEVRON and PAGES */
+
+.main-funko-chevron__nav-bar__ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: var(--spacing-68);
+  gap: var(--spacing-8);
+}
+
+.main-funko-chevron__nav-bar__buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 4.4rem;
+  height: 4.4rem;
+  padding: .5rem .4rem;
+  font-size: var(--font-16);
+  border: .1rem solid var(--grey_30);
+  color: var(--dark-solid);
+  font-weight: 700;
+}
+
+.main-funko-chevron__nav-bar__buttons:hover {
+  border: .1rem solid var(--primary-90);
+  color: var(--primary-solid);
+} 
+
+.iconify__chevron {
+  font-size: var(--font-16);
+  color: var(--dark-solid);
+  font-weight: 700;
+}
+
+.iconify__chevron:hover {
+  color: var(--primary-solid);
+}
+
+/* -------------------------------- */
+
+/* FOOTER */
+
+.footer {
+  background-color: var(--grey-solid);
+  padding: var(--spacing-68);
+}
+
+.footer__copy-right {
+  text-align: center;
+  font-size: var(--font-20);
+  font-weight: 500;
+  margin-top: var(--spacing-36);
+}
+/* -------------------------------- */
+
+
+/* MEDIA QUERY */
+
+/* Media screen celular */
+
+@media screen and (max-width: 768px) {
+  .main {
+    margin: 0 1rem;
+  }
+  .main-funko-group {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .main {
+    margin: 0 1rem;
+  }
+  .main-funko-group {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* -------------------------------- */
+
+/* ANIMATION */
+
+/* Animación para las imágenes al hacer :hover */
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
