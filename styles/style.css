@@ -167,7 +167,7 @@ a {
   position: absolute;
   width: 100%;
   height: 18rem;
-  background-image: url(/codo_a_codo/challenge_integrador/img/funkos-banner.webp);
+  background-image: url(../img/funkos-banner.webp);
   background-size: cover;
   background-repeat: no-repeat;
   filter: brightness(0.58) blur(3px) saturate(1.2);
@@ -409,15 +409,17 @@ h6 {
 
 .lanzamientos {
   position: relative;
-  width: 80%;
+  width: 78%;
   margin: 0 auto;
 }
 .lanz-container {
   display: flex;
-  overflow-x: auto;
+  overflow-x: hidden;
   white-space: nowrap;
-  /* justify-content: space-between; */
+  cursor: grab;
+  user-select: none;
 }
+
 .funko-item {
   flex-shrink: 0;
   width: 18rem;
