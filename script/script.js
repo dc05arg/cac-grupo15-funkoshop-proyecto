@@ -1,17 +1,18 @@
-// //  Menú hamburguesa despegable en el navbar del header para versión mobile.
+//  Menú hamburguesa despegable en el navbar del header para versión mobile.
 
-// const navbarIcon = document.querySelector(".navbar__icon");
-// const navbarMenu = document.querySelector(".navbar__menu");
+const navbarIcon = document.querySelector(".navbar__icon");
+const navbarMenu = document.querySelector(".navbar__menu");
 
+// ESTA PARTE HACE QUE NO SE PUEDAN GENERAR LOS FUNKO-ITEM, NO SE POR QUÉ
 // navbarIcon.addEventListener("click", () => {
 //   navbarMenu.classList.toggle("show-menu");
 // });
 
-// // Agregamos que ante cualquier scroll en la página el menú hamburguesa se oculte.
+// Agregamos que ante cualquier scroll en la página el menú hamburguesa se oculte.
 
-// document.addEventListener("scroll", () => {
-//   navbarMenu.classList.remove("show-menu");
-// });
+document.addEventListener("scroll", () => {
+  navbarMenu.classList.remove("show-menu");
+});
 
 // Función para generar los funko-item
 const funkoData = [
@@ -60,12 +61,11 @@ const funkoData = [
 ];
 
 document.addEventListener("DOMContentLoaded", function () {
-  const funkoContainer = document.querySelector(".lanz-container");
+  const glideContainer = document.querySelector(".glide__slides");
 
   function createFunkoItem(data) {
     const funkoItem = document.createElement("div");
-    funkoItem.className = "funko-item";
-
+    funkoItem.className = "funko-item glide__slide";
     funkoItem.innerHTML = `
     <img src="${data.imgSrc}" alt="${data.title}" class="lanz-img">
     <div class="nuevo"><p class="nuevo">NUEVO</p></div>
@@ -75,7 +75,7 @@ document.addEventListener("DOMContentLoaded", function () {
     <p class="cuotas">${data.cuotas}</p>
   `;
 
-    funkoContainer.appendChild(funkoItem);
+    glideContainer.appendChild(funkoItem);
   }
 
   funkoData.forEach((item) => {
@@ -85,31 +85,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // SLIDER ------------------------------------------------------------------------------------------------------------------------
 document.addEventListener("DOMContentLoaded", function () {
-  const lanzContainer = document.querySelector(".lanz-container");
-  const items = document.querySelectorAll(".funko-item");
-
-  let isMouseDown = false;
-  let startX, scrollLeft;
-
-  lanzContainer.addEventListener("mousedown", (e) => {
-    isMouseDown = true;
-    startX = e.pageX - lanzContainer.offsetLeft;
-    scrollLeft = lanzContainer.scrollLeft;
-  });
-
-  lanzContainer.addEventListener("mouseleave", () => {
-    isMouseDown = false;
-  });
-
-  lanzContainer.addEventListener("mouseup", () => {
-    isMouseDown = false;
-  });
-
-  lanzContainer.addEventListener("mousemove", (e) => {
-    if (!isMouseDown) return;
-    e.preventDefault();
-    const x = e.pageX - lanzContainer.offsetLeft;
-    const walk = (x - startX) * 2;
-    lanzContainer.scrollLeft = scrollLeft - walk;
-  });
+  new Glide(".glide", {
+    type: "carousel",
+    startAt: 0,
+    perView: 3,
+    gap: 30,
+    breakpoints: {
+      991: {
+        perView: 2,
+      },
+      768: {
+        perView: 1,
+      },
+    },
+  }).mount();
 });

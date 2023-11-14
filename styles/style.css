@@ -20,7 +20,7 @@ img {
 a {
   text-decoration: none;
   color: #ffffff;
-  transition: all 0.3s;
+  transition: all 0.5s;
 }
 
 .nvha:hover {
@@ -409,8 +409,9 @@ h6 {
 
 .lanzamientos {
   position: relative;
-  width: 78%;
+  width: 80%;
   margin: 0 auto;
+  margin-bottom: 3rem;
 }
 .lanz-container {
   display: flex;
@@ -421,13 +422,9 @@ h6 {
 }
 
 .funko-item {
-  flex-shrink: 0;
-  width: 18rem;
-  height: 26rem;
-  margin: auto 1rem;
   position: relative;
   transition: all 0.5s ease;
-  margin-bottom: 2rem;
+  padding: 0.7rem;
 }
 
 @media screen and (max-width: 500px) {
@@ -442,10 +439,8 @@ h6 {
 }
 
 .funko-item:hover {
-  border: 1px solid #33333345;
   border-radius: 1rem 0 1rem 1rem;
-  padding: 2rem;
-  box-shadow: 0 0 20px #30343f7e;
+  box-shadow: 0 0 20px rgba(222, 222, 222, 0.9);
 }
 
 .lanz-img {
