@@ -2,6 +2,7 @@
 const funkoData = [
   {
     imgSrc: "img/star-wars/trooper-1.webp",
+    hover: "img/star-wars/trooper-box.webp",
     title: "STORMTROOPER LIGHTSABER",
     category: "STAR WARS",
     price: "$ 1799,99",
@@ -9,6 +10,7 @@ const funkoData = [
   },
   {
     imgSrc: "img/pokemon/pidgeotto-1.webp",
+    hover: "img/pokemon/pidgeotto-box.webp",
     title: "PIDGEOTTO",
     category: "POKEMON",
     price: "$ 1799,99",
@@ -16,6 +18,7 @@ const funkoData = [
   },
   {
     imgSrc: "img/harry-potter/luna-1.webp",
+    hover: "img/harry-potter/luna-box.webp",
     title: "LUNA LOVEGOOD LION MASK",
     category: "HARRY POTTER",
     price: "$ 1799,99",
@@ -23,6 +26,7 @@ const funkoData = [
   },
   {
     imgSrc: "img/harry-potter/harry-1.webp",
+    hover: "img/harry-potter/harry-box.webp",
     title: "HARRY",
     category: "HARRY POTTER",
     price: "$ 1799,99",
@@ -30,6 +34,7 @@ const funkoData = [
   },
   {
     imgSrc: "img/harry-potter/hermione-1.webp",
+    hover: "img/harry-potter/hermione-box.webp",
     title: "HERMIONE",
     category: "HARRY POTTER",
     price: "$ 1799,99",
@@ -37,6 +42,7 @@ const funkoData = [
   },
   {
     imgSrc: "img/harry-potter/snape-patronus-1.webp",
+    hover: "img/harry-potter/snape-patronus-box.webp",
     title: "SNAPE PATRONUS",
     category: "HARRY POTTER",
     price: "$ 1799,99",
@@ -58,6 +64,18 @@ document.addEventListener("DOMContentLoaded", function () {
     <p class="price">${data.price}</p>
     <p class="cuotas">${data.cuotas}</p>
   `;
+
+    // Agrega el evento de hover al elemento creado
+    funkoItem.addEventListener("mouseover", function () {
+      const imgElement = this.querySelector(".lanz-img");
+      imgElement.src = data.hover || data.imgSrc;
+    });
+
+    // Restaura la imagen original al salir del hover
+    funkoItem.addEventListener("mouseleave", function () {
+      const imgElement = this.querySelector(".lanz-img");
+      imgElement.src = data.imgSrc;
+    });
 
     glideContainer.appendChild(funkoItem);
   }

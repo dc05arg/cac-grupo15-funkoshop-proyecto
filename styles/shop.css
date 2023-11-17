@@ -1,55 +1,54 @@
 /* Se importan Fuentes de Google Fonts */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap");
 
 /* Se crean Variables */
 
 :root {
-
   /* colors */
-  --primary-solid: #FF3333; 
+  --primary-solid: #ff3333;
   --primary-90: rgba(255, 51, 51, 0.9);
   --primary-50: rgba(255, 51, 51, 0.5);
   --primary-30: rgba(255, 51, 51, 0.3);
 
-  --secondary-solid: #1D84B5;
+  --secondary-solid: #1d84b5;
   --secondary_90: rgba(29, 132, 181, 0.9);
   --secondary_60: rgba(29, 132, 181, 0.6);
   --secondary_30: rgba(29, 132, 181, 0.3);
 
-  --dark-solid: #1F1F1F;
+  --dark-solid: #1f1f1f;
   --dark_90: rgba(31, 31, 31, 0.9);
   --dark_60: rgba(31, 31, 31, 0.6);
   --dark_30: rgba(31, 31, 31, 0.3);
 
   /* Grey para background */
-  --grey-solid: #30343F;
+  --grey-solid: #30343f;
   --grey_90: rgba(48, 52, 63, 0.9);
   --grey_60: rgba(48, 52, 63, 0.6);
   --grey_30: rgba(48, 52, 63, 0.3);
 
   /* White para background */
-  --white-solid: #FAFAFF;
+  --white-solid: #fafaff;
 
   /* Pure White para Fonts */
-  --white-font: #FFFFFF;
+  --white-font: #ffffff;
 
   /* Pink */
-  --pink-solid: #FF1654;
+  --pink-solid: #ff1654;
   --pink-90: rgba(255, 22, 84, 0.9);
   --pink-60: rgba(255, 22, 84, 0.6);
   --pink-30: rgba(255, 22, 84, 0.3);
 
   /* Typographies */
-  --principal-font: 'Inter', sans-serif;
-  --secondary-font: 'Raleway', sans-serif;
+  --principal-font: "Inter", sans-serif;
+  --secondary-font: "Raleway", sans-serif;
 
   /* Font-sizes */
   --font-46: 4.6em;
   --font-38: 3.8em;
   --font-30: 3em;
   --font-24: 2.4em;
-  --font-20: 2.0em;
+  --font-20: 2em;
   --font-18: 1.8em;
   --font-16: 1.6em;
   --font-14: 1.4em;
@@ -65,17 +64,17 @@
   --spacing-16: 1.6rem;
   --spacing-12: 1.2rem;
   --spacing-8: 0.8rem;
-
 }
 
 /* ------------ NORMALIZADO --------------- */
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
 
 /* ------------ TIPOGRAFÍAS --------------- */
 
@@ -91,12 +90,14 @@ a {
   color: inherit;
 }
 
-header, footer {
+header,
+footer {
   color: var(--white-font);
   font-family: var(--secondary-font);
 }
 
-ul, ol {
+ul,
+ol {
   list-style: none;
 }
 
@@ -140,7 +141,7 @@ header {
   font-size: var(--font-20);
   padding: var(--spacing-8) var(--spacing-16);
   display: inline-block;
-  transition: background .2s ease-in-out;
+  transition: background 0.2s ease-in-out;
   position: relative;
 }
 
@@ -165,6 +166,7 @@ header {
   width: 30rem;
   position: absolute;
   background-color: var(--grey-solid);
+  z-index: 100;
 }
 
 .submenu__link {
@@ -175,21 +177,21 @@ header {
 
 .submenu__link:hover {
   background-color: var(--primary-90);
-  transition: background .2s ease-in-out;
+  transition: background 0.2s ease-in-out;
 }
 
 /* -------------------------------- */
 
 /* MAIN */
 
-.main { /* coloco el div principal al lado del aside */
+.main {
+  /* coloco el div principal al lado del aside */
   /* display: flex; */
   /* o se puede usar grid */
   display: grid;
   grid-template-columns: 1fr 5fr;
   padding: var(--spacing-36) 0;
 }
-
 
 /* -- Aside --*/
 
@@ -204,11 +206,14 @@ header {
   margin-bottom: var(--spacing-8);
 }
 
-.aside-search, .aside-order, .aside-price {
+.aside-search,
+.aside-order,
+.aside-price {
   margin-bottom: var(--spacing-18);
 }
 
-.aside-search__input, .aside-order__form-select {
+.aside-search__input,
+.aside-order__form-select {
   width: 100%;
   height: 3.5rem;
 }
@@ -236,17 +241,17 @@ header {
 
 .aside-filter__form > input {
   margin-left: var(--spacing-16);
-} 
-
-input, select {
-  border: .2rem solid var(--grey_60);
-  border-radius: .4rem;
 }
 
+input,
+select {
+  border: 0.2rem solid var(--grey_60);
+  border-radius: 0.4rem;
+}
 
 /* -- Main Funko Group -- */
 
-.main-funko{
+.main-funko {
   margin-left: 1rem;
 }
 
@@ -280,7 +285,7 @@ input, select {
 } */
 
 .funko-item__img > img {
-  animation: fade .8s;
+  animation: fade 0.8s;
 }
 
 .funko-item__back-img {
@@ -326,7 +331,6 @@ input, select {
 
 /* -------------------------------- */
 
-
 /* CHEVRON and PAGES */
 
 .main-funko-chevron__nav-bar__ul {
@@ -343,17 +347,17 @@ input, select {
   align-items: center;
   width: 4.4rem;
   height: 4.4rem;
-  padding: .5rem .4rem;
+  padding: 0.5rem 0.4rem;
   font-size: var(--font-16);
-  border: .1rem solid var(--grey_30);
+  border: 0.1rem solid var(--grey_30);
   color: var(--dark-solid);
   font-weight: 700;
 }
 
 .main-funko-chevron__nav-bar__buttons:hover {
-  border: .1rem solid var(--primary-90);
+  border: 0.1rem solid var(--primary-90);
   color: var(--primary-solid);
-} 
+}
 
 .iconify__chevron {
   font-size: var(--font-16);
@@ -381,7 +385,6 @@ input, select {
   margin-top: var(--spacing-36);
 }
 /* -------------------------------- */
-
 
 /* MEDIA QUERY */
 
