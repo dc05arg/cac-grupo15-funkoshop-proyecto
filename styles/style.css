@@ -82,10 +82,6 @@ header {
   }
 }
 
-.menu-icon:hover {
-  color: #ff3333;
-}
-
 .chevron-shop {
   position: relative;
   top: 5px;
@@ -120,31 +116,47 @@ a {
 }
 
 @media screen and (max-width: 1024px) {
-  .nav-header {
-    position: absolute;
-    top: 0;
-    right: 0;
-    background-color: #111111;
-  }
   .header-content {
     justify-content: center;
     padding: 0;
   }
-  .nav-header li {
+
+  .nav-header {
+    margin-top: 7rem;
+  }
+
+  .nav-list {
     display: none;
-    /* display: block; */
+  }
+
+  .show-menu {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    left: 0;
+    background-color: #30343f;
+  }
+
+  .chevron-shop {
+    display: none;
+  }
+
+  .nav-header li {
+    display: inline-block;
     line-height: 2rem;
-    padding: 1rem 2rem;
+    padding: 0.5rem 2rem;
     margin-right: 0;
   }
-  .nav-header li:hover {
-    background-color: #333333;
-  }
+
   a {
     margin-left: 0;
   }
   .menu-icon {
     display: block;
+  }
+  .menu-icon:active {
+    color: #ff3333;
   }
   .funkoshop-logo {
     width: 50vw;
