@@ -1,19 +1,3 @@
-//  Menú hamburguesa despegable en el navbar del header para versión mobile.
-
-const navbarIcon = document.querySelector(".navbar__icon");
-const navbarMenu = document.querySelector(".navbar__menu");
-
-// ESTA PARTE HACE QUE NO SE PUEDAN GENERAR LOS FUNKO-ITEM, NO SE POR QUÉ
-// navbarIcon.addEventListener("click", () => {
-//   navbarMenu.classList.toggle("show-menu");
-// });
-
-// Agregamos que ante cualquier scroll en la página el menú hamburguesa se oculte.
-
-document.addEventListener("scroll", () => {
-  navbarMenu.classList.remove("show-menu");
-});
-
 // Función para generar los funko-item
 const funkoData = [
   {
@@ -97,6 +81,10 @@ document.addEventListener("DOMContentLoaded", function () {
       768: {
         perView: 1,
       },
+    },
+    navigation: {
+      prevEl: ".glide__arrow--prev",
+      nextEl: ".glide__arrow--next",
     },
   }).mount();
 });

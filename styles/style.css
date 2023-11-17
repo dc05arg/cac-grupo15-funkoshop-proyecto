@@ -1,3 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Montserrat:wght@300;500&family=Raleway:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css");
+@import url("https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.theme.min.css");
+
 * {
   margin: 0;
   padding: 0;
@@ -427,6 +431,17 @@ h6 {
   padding: 0.7rem;
 }
 
+iconify-icon {
+  font-size: 1rem;
+  color: #111111;
+}
+.glide__arrow--left {
+  left: 0;
+}
+.glide__arrow--right {
+  right: 0;
+}
+
 @media screen and (max-width: 500px) {
   .funko-item {
     width: 12rem;
@@ -470,15 +485,6 @@ h6 {
   cursor: pointer;
   margin: 10px;
 }
-
-.chevron.izq {
-  left: -40px;
-}
-
-.chevron.der {
-  right: -40px;
-}
-
 /* FOOTER------------------------------------------------------------------------------------------------------------------------------------- */
 footer {
   display: flex;

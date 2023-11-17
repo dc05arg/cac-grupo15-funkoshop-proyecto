@@ -4,17 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles/style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.theme.min.css"
-    />
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Montserrat:wght@300;500&family=Raleway:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap");
-    </style>
     <title>HOME</title>
   </head>
   <body>
@@ -180,43 +169,23 @@
 
       <div class="lanzamientos">
         <h4>ULTIMOS LANZAMIENTOS</h4>
-        <div class="chevron izq">
-          <i>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="28"
-              height="28"
-              viewBox="0 0 28 28"
-            >
-              <g transform="rotate(-90 14 14)">
-                <path
-                  fill="currentColor"
-                  d="M23.707 18.707a1 1 0 0 1-1.414 0L14 10.414l-8.293 8.293a1 1 0 0 1-1.414-1.414l9-9a1 1 0 0 1 1.414 0l9 9a1 1 0 0 1 0 1.414Z"
-                />
-              </g>
-            </svg>
-          </i>
-        </div>
-        <div class="chevron der">
-          <i>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="28"
-              height="28"
-              viewBox="0 0 28 28"
-            >
-              <g transform="rotate(90 14 14)">
-                <path
-                  fill="currentColor"
-                  d="M23.707 18.707a1 1 0 0 1-1.414 0L14 10.414l-8.293 8.293a1 1 0 0 1-1.414-1.414l9-9a1 1 0 0 1 1.414 0l9 9a1 1 0 0 1 0 1.414Z"
-                />
-              </g>
-            </svg>
-          </i>
-        </div>
         <div class="lanz-container glide">
           <div class="glide__track" data-glide-el="track">
             <div class="glide__slides"></div>
+            <div class="glide__arrows" data-glide-el="controls">
+              <button
+                class="glide__arrow glide__arrow--left"
+                data-glide-dir="<"
+              >
+                <iconify-icon icon="tabler:chevron-left"></iconify-icon>
+              </button>
+              <button
+                class="glide__arrow glide__arrow--right"
+                data-glide-dir=">"
+              >
+                <iconify-icon icon="tabler:chevron-right"></iconify-icon>
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -240,6 +209,7 @@
       </div>
     </footer>
     <script src="./script/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.7/dist/iconify-icon.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
   </body>
 </html>
