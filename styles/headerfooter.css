@@ -1,0 +1,392 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap");
+
+/* --------------------------------------------------------------------------- VARIABLES --------------------------------------------------------------------------- */
+
+:root {
+  /* :root y html son dos selectores que representan el elemento raíz del documento.
+  :root lo utilizo para declarar las variables.
+  html lo utilizo para hacer normalizaciones */
+
+  /* -------------------- PALETTE -------------------- */
+
+  --color-primario: #ff3333;
+  --color-primario-90: rgba(255, 51, 51, 0.9);
+  --color-primario-50: rgba(255, 51, 51, 0.5);
+  --color-primario-30: rgba(255, 51, 51, 0.3);
+
+  --color-secundario: #1d84b5;
+  --color-secundario-90: rgba(29, 132, 181, 0.9);
+  --color-secundario-50: rgba(29, 132, 181, 0.5);
+  --color-secundario-30: rgba(29, 132, 181, 0.3);
+
+  --color-oscuro: #1f1f1f;
+  --color-oscuro-90: rgba(31, 31, 31, 0.9);
+  --color-oscuro-50: rgba(31, 31, 31, 0.5);
+  --color-oscuro-30: rgba(31, 31, 31, 0.3);
+
+  --background-oscuro: #30343f;
+  --background-claro: #fafaff;
+
+  --color-fuente-claro: #ffffff;
+  --color-fuente-gris: #333333;
+  --color-fuente-oscuro: #111111;
+
+  /* -------------------- TYPOGRAPHY -------------------- */
+
+  --fuente-base: "Inter", sans-serif;
+  --fuente-alternativa: "Raleway", sans-serif;
+
+  /* -------------------- SIZE -------------------- */
+
+  --display-size-46px: 2.3em;
+  --jumbo-size-38px: 1.9em;
+  --xlarge-size-30px: 1.5em;
+  --large-size-24px: 1.2em;
+  --medium-size-20px: 1em;
+  --medium-size-18px: 0.9em;
+  --small-size-16px: 0.8em;
+  --xsmall-size-14px: 0.7em;
+  --xxsmall-size-12px: 0.6em;
+  --normal-size-10px: 0.5em;
+
+  /* -------------------- SPACING -------------------- */
+
+  --spacing-128: 6.4rem;
+  --spacing-68: 3.4rem;
+  --spacing-48: 2.4rem;
+  --spacing-36: 1.8rem;
+  --spacing-28: 1.4rem;
+  --spacing-24: 1.2rem;
+  --spacing-20: 1rem;
+  --spacing-16: 0.8rem;
+  --spacing-14: 0.7rem;
+  --spacing-12: 0.6rem;
+  --spacing-10: 0.5rem;
+  --spacing-8: 0.4rem;
+  --spacing-6: 0.3rem;
+  --spacing-4: 0.2rem;
+  --spacing-2: 0.1rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* --------------------------------------------------------------------------- HEADER --------------------------------------------------------------------------- */
+
+/* ---------------------------------------- Mobile Screen ---------------------------------------- */
+
+header {
+  padding-bottom: 3.45rem;
+}
+
+/* Agrego padding botton para que el header no se superponga al estar fixed. */
+
+header .navbar {
+  background-color: var(--background-oscuro);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+}
+
+/* Accedo a la clase .navbar desde la etiqueta header para evitar conflictos con el footer.*/
+
+.navbar__img {
+  width: 10rem;
+  font-size: var(--normal-size-10px);
+  margin-left: var(--spacing-14);
+}
+
+.navbar__icon {
+  cursor: pointer;
+  font-size: var(--large-size-24px);
+  padding: var(--spacing-20) var(--spacing-14);
+}
+
+.navbar__icon iconify-icon {
+  color: white;
+  font-size: 24px;
+}
+
+.navbar__menu {
+  display: none;
+  position: absolute;
+  background-color: var(--background-oscuro);
+  top: 3.45rem;
+  width: 100%;
+  padding: var(--spacing-14);
+}
+
+/* show-menu se aplica al hacer click en el icon hamburguesa. Mientras tanto el menú se oculta */
+
+.navbar__menu.show-menu {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-16);
+}
+
+.navbar__link {
+  display: inline-block;
+  font-size: var(--small-size-16px);
+}
+
+/* Ocultamos el submenú desplegable para mobile screen */
+
+.navbar__shop--chevron {
+  display: none;
+}
+
+.navbar__submenu {
+  display: none;
+}
+
+.navbar__sublink {
+  display: none;
+}
+
+/* ---------------------------------------- Tablet Screen ---------------------------------------- */
+
+@media screen and (min-width: 768px) {
+  header {
+    padding-bottom: 4.55rem;
+  }
+
+  /* header .navbar {
+      background-color: var(--background-oscuro);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: fixed;
+      width: 100%;
+      z-index: 10;
+    } */
+
+  .navbar__img {
+    width: 13.75rem;
+    /* margin-left: var(--spacing-14); */
+  }
+
+  .navbar__icon {
+    display: none;
+  }
+
+  .navbar__menu {
+    display: flex;
+    align-items: center;
+    position: relative;
+    /* background-color: var(--background-oscuro); */
+    top: auto;
+    width: auto;
+    padding: var(--spacing-28) var(--spacing-14);
+    gap: var(--spacing-16);
+  }
+
+  .navbar__link {
+    /* display: inline-block; */
+    font-size: var(--medium-size-18px);
+    padding: var(--spacing-8) var(--spacing-16);
+  }
+}
+
+/* ---------------------------------------- Desktop Screen ---------------------------------------- */
+
+@media screen and (min-width: 1024px) {
+  header {
+    background-color: var(--background-oscuro);
+    padding: var(--spacing-36) var(--spacing-14);
+  }
+
+  header .navbar {
+    /* background-color: var(--background-oscuro); */
+    /* display: flex; */
+    /* justify-content: space-between; */
+    /* align-items: center; */
+    position: relative;
+    width: auto;
+    /* z-index: 10; */
+  }
+
+  .navbar__img {
+    width: 17.5rem;
+    margin-left: 0;
+  }
+
+  /* .navbar__icon {
+      display: none;
+    } */
+
+  .navbar__menu {
+    /* display: flex; */
+    /* align-items: center; */
+    /* position: relative; */
+    /* background-color: var(--background-oscuro); */
+    /* top: auto; */
+    /* width: auto; */
+    padding: 0;
+    gap: var(--spacing-20);
+  }
+
+  .navbar__link {
+    /* display: inline-block; */
+    font-size: var(--medium-size-20px);
+    /* padding: var(--spacing-8) var(--spacing-16); */
+    transition: 0.2s ease-in-out;
+  }
+
+  .navbar__link:hover {
+    background-color: var(--color-primario-90);
+  }
+
+  /* Configuramos submenú desplegable para desktop screen. */
+
+  .navbar__shop--chevron {
+    display: inline-block;
+    color: var(--color-fuente-claro);
+  }
+
+  .navbar__desplegable {
+    position: relative;
+  }
+
+  .navbar__submenu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    background-color: var(--background-oscuro);
+  }
+
+  .navbar__desplegable:hover .navbar__submenu {
+    display: flex;
+  }
+
+  .navbar__sublink {
+    display: block;
+    font-size: var(--medium-size-18px);
+    padding: var(--spacing-8) var(--spacing-16);
+    transition: 0.2s ease-in-out;
+  }
+
+  .navbar__sublink:hover {
+    background-color: var(--color-primario-90);
+  }
+}
+
+/* --------------------------------------------------------------------------- FOOTER --------------------------------------------------------------------------- */
+
+/* ---------------------------------------- Mobile Screen ---------------------------------------- */
+
+footer {
+  background-color: var(--background-oscuro);
+  padding: var(--spacing-36) var(--spacing-14) var(--spacing-12);
+}
+
+footer .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar__footer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-14);
+}
+
+/* Accedo a las clases a traves de la etiqueta footer ya que se comparten con las clases del header. */
+
+footer .navbar__link {
+  /* display: inline-block; */
+  font-size: 0.65em;
+}
+
+footer .navbar__img {
+  width: 4.25rem;
+  margin-left: 0;
+}
+
+.copyright {
+  color: var(--color-fuente-claro);
+  padding-top: var(--spacing-36);
+  font-size: var(--xxsmall-size-12px);
+  text-align: center;
+}
+
+/* ---------------------------------------- Tablet Screen ---------------------------------------- */
+
+@media screen and (min-width: 768px) {
+  footer {
+    /* background-color: var(--background-oscuro); */
+    padding-top: var(--spacing-48);
+  }
+
+  /* footer .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  } */
+
+  /* .navbar__footer {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-14);
+  } */
+
+  footer .navbar__link {
+    /* display: inline-block; */
+    font-size: var(--medium-size-18px);
+  }
+
+  footer .navbar__img {
+    width: 6rem;
+    /* margin-left: 0; */
+  }
+
+  .copyright {
+    padding-top: var(--spacing-48);
+    font-size: var(--small-size-16px);
+    /* text-align: center; */
+  }
+}
+
+/* ---------------------------------------- Desktop Screen ---------------------------------------- */
+
+@media screen and (min-width: 1024px) {
+  footer {
+    /* background-color: var(--background-oscuro); */
+    padding-top: var(--spacing-68);
+  }
+
+  /* footer .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  } */
+
+  /* .navbar__footer {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-14);
+  } */
+
+  footer .navbar__link {
+    /* display: inline-block; */
+    font-size: var(--medium-size-20px);
+  }
+
+  footer .navbar__img {
+    width: 7.15rem;
+    /* margin-left: 0; */
+  }
+
+  .copyright {
+    padding-top: var(--spacing-68);
+    font-size: var(--medium-size-20px);
+    /* text-align: center; */
+  }
+}

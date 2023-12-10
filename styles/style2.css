@@ -1051,3 +1051,986 @@ dejo que el resto se coloque de manera responsive. */
     padding-right: 13.5rem;
   }
 }
+
+/* --------------------------------------------------------------------------- ITEM --------------------------------------------------------------------------- */
+
+/* ---------------------------------------- Mobile Screen ---------------------------------------- */
+
+/* -------------------- ITEM -------------------- */
+
+.item__page {
+  padding: var(--spacing-14);
+}
+
+.item {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, auto);
+  align-items: center;
+  padding-bottom: var(--spacing-48);
+  row-gap: var(--spacing-4);
+}
+
+.item__carrito--article {
+  display: none;
+}
+
+.item__pago--article {
+  display: none;
+}
+
+/* .item__carrito--article e .item__pago--article son los contenedores
+que se encuentran dentro del mismo article. En la versión mobile tienen
+"display: none" porque debo usar .item__carrito e .item__pago que se encuentran
+fuera del article para poder ubicarlos correctamente en la grilla.*/
+
+.item__content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-8);
+}
+
+.item__license {
+  font-size: var(--normal-size-10px);
+  font-weight: 500;
+  color: var(--color-fuente-gris);
+}
+
+.item__title {
+  font-size: var(--xsmall-size-14px);
+  font-weight: 700;
+}
+
+.item__description {
+  font-size: var(--normal-size-10px);
+  font-weight: 400;
+  color: var(--color-fuente-gris);
+}
+
+.item__price {
+  font-size: var(--xsmall-size-14px);
+  font-weight: 400;
+  color: var(--color-fuente-gris);
+}
+
+.item__carrito {
+  grid-column: 1/3;
+  grid-row: 2;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-bottom: var(--spacing-8);
+}
+
+.item__cantidad {
+  max-width: 20%;
+  text-align: center;
+  font-size: var(--xxsmall-size-12px);
+  padding: var(--spacing-4) var(--spacing-8);
+  border: 0.5px solid #c9c9c9;
+}
+
+.item__add-cart {
+  padding: var(--spacing-6) var(--spacing-12);
+  background-color: var(--color-primario);
+  color: var(--color-fuente-claro);
+  border: 0;
+  font-weight: 400;
+}
+
+.item__pago {
+  grid-column: 1/3;
+  grid-row: 3;
+  text-align: center;
+  color: var(--color-secundario);
+  font-size: var(--xxsmall-size-12px);
+  font-weight: 600;
+  margin-top: var(--spacing-6);
+}
+
+.item__pago--border {
+  border-bottom: 1px solid var(--color-secundario);
+}
+
+/* ---------------------------------------- Tablet Screen ---------------------------------------- */
+
+@media screen and (min-width: 768px) {
+  /* -------------------- ITEM -------------------- */
+
+  /* .item__page {
+    padding: var(--spacing-14);
+  } */
+
+  .item {
+    /* display: grid; */
+    /* grid-template-columns: repeat(2, 1fr); */
+    grid-template-rows: 1fr;
+    /* align-items: center; */
+    padding-top: var(--spacing-36);
+    /* padding-bottom: var(--spacing-48); */
+    row-gap: 0;
+  }
+
+  .item__carrito {
+    display: none;
+  }
+
+  .item__pago {
+    display: none;
+  }
+
+  /* Como aclaré anteriormente a partir de la Tablet-Screen vamos a usar
+  los contenedores .item__carrito--article e .item__pago--article para que
+  se puedan ubicar dentro de una misma columna de la grilla correctamente
+  de acuerdo con el modelo inicial de la página web (Ya que .item__content
+  tendría todos los contedores necesarios para utilizar flex). Los contenedores
+  .item__carrito e .item__pago tendrán "display: none" */
+
+  .item__img {
+    width: 91.5%;
+  }
+
+  .item__content {
+    /* display: flex; */
+    /* flex-direction: column; */
+    gap: var(--spacing-16);
+  }
+
+  .item__license {
+    font-size: var(--xsmall-size-14px);
+    /* font-weight: 500; */
+    /* color: var(--color-fuente-gris); */
+  }
+
+  .item__title {
+    font-size: var(--large-size-24px);
+    /* font-weight: 700; */
+  }
+
+  .item__description {
+    font-size: var(--medium-size-18px);
+    /* font-weight: 400; */
+    /* color: var(--color-fuente-gris); */
+  }
+
+  .item__price {
+    font-size: var(--large-size-24px);
+    /* font-weight: 400; */
+    /* color: var(--color-fuente-gris); */
+  }
+
+  .item__carrito--article {
+    display: flex;
+    padding: var(--spacing-8) 0;
+    gap: var(--spacing-36);
+  }
+
+  .item__cantidad {
+    /* max-width: 20%; */
+    /* text-align: center; */
+    font-size: var(--xsmall-size-14px);
+    /* padding: var(--spacing-4) var(--spacing-8); */
+    /* border: 0.5px solid #c9c9c9; */
+  }
+
+  .item__add-cart {
+    font-size: var(--medium-size-18px);
+    padding: var(--spacing-8) var(--spacing-16);
+    /* background-color: var(--color-primario); */
+    /* color: var(--color-fuente-claro); */
+    /* border: 0; */
+    /* font-weight: 400; */
+  }
+
+  .item__pago--article {
+    display: block;
+    text-align: start;
+    color: var(--color-secundario);
+    font-size: var(--xsmall-size-14px);
+    font-weight: 700;
+  }
+
+  /* .item__pago--border {
+    border-bottom: 1px solid var(--color-secundario);
+  } */
+}
+
+/* ---------------------------------------- Desktop Screen ---------------------------------------- */
+
+@media screen and (min-width: 1024px) {
+  /* -------------------- ITEM -------------------- */
+
+  /* .item__page {
+    padding: var(--spacing-14);
+  } */
+
+  /* .item {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    align-items: center;
+    padding-top: var(--spacing-36);
+    padding-bottom: var(--spacing-48);
+    row-gap: 0;
+  } */
+
+  /* .item__carrito {
+    display: none;
+  } */
+
+  /* .item__pago {
+    display: none;
+  } */
+
+  /* Como aclaré anteriormente a partir de la Tablet-Screen vamos a usar
+    los contenedores .item__carrito--article e .item__pago--article para que
+    se puedan ubicar dentro de una misma columna de la grilla correctamente
+    de acuerdo con el modelo inicial de la página web (Ya que .item__content
+    tendría todos los contedores necesarios para utilizar flex). Los contenedores
+    .item__carrito e .item__pago tendrán "display: none" */
+
+  /* .item__img {
+    width: 91.5%;
+  } */
+
+  /* .item__content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-16);
+  } */
+
+  .item__license {
+    font-size: var(--small-size-16px);
+    /* font-weight: 500; */
+    /* color: var(--color-fuente-gris); */
+  }
+
+  .item__title {
+    font-size: var(--jumbo-size-38px);
+    /* font-weight: 700; */
+  }
+
+  .item__description {
+    font-size: var(--large-size-24px);
+    /* font-weight: 400; */
+    /* color: var(--color-fuente-gris); */
+  }
+
+  .item__price {
+    font-size: var(--jumbo-size-38px);
+    /* font-weight: 400; */
+    /* color: var(--color-fuente-gris); */
+  }
+
+  /* .item__carrito--article {
+    display: flex;
+    padding: var(--spacing-8) 0;
+    gap: var(--spacing-36);
+  } */
+
+  .item__cantidad {
+    /* max-width: 20%; */
+    /* text-align: center; */
+    font-size: var(--large-size-24px);
+    /* padding: var(--spacing-4) var(--spacing-8); */
+    /* border: 0.5px solid #c9c9c9; */
+  }
+
+  /* .item__add-cart {
+    font-size: var(--medium-size-18px);
+    padding: var(--spacing-8) var(--spacing-16);
+    background-color: var(--color-primario);
+    color: var(--color-fuente-claro);
+    border: 0;
+    font-weight: 400;
+  } */
+
+  /* .item__pago--article {
+    display: block;
+    text-align: start;
+    color: var(--color-secundario);
+    font-size: var(--xsmall-size-14px);
+    font-weight: 700;
+  } */
+
+  /* .item__pago--border {
+    border-bottom: 0.5px solid var(--color-secundario);
+  } */
+}
+
+/* --------------------------------------------------------------------------- ADMIN --------------------------------------------------------------------------- */
+
+/* ---------------------------------------- Mobile Screen ---------------------------------------- */
+
+/* -------------------- BUSCADOR -------------------- */
+
+.buscador {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-8);
+  padding: var(--spacing-14);
+  padding-bottom: 0;
+}
+
+.buscador__icon {
+  max-width: 2.3rem;
+}
+
+.buscador__search {
+  padding: var(--spacing-4) var(--spacing-12);
+  border: 2px solid var(--background-oscuro);
+  border-radius: 6px;
+}
+
+/* -------------------- PRODUCTOS -------------------- */
+
+.productos {
+  padding: var(--spacing-14);
+}
+
+.productos__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: var(--spacing-14);
+  max-width: 500px;
+}
+
+/* Agrego un max-width para que el ancho del header
+no sobrepase el width total de la tabla. */
+
+.productos__title {
+  font-size: var(--small-size-16px);
+  font-weight: 700;
+}
+
+.productos__add {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-4);
+  font-size: var(--normal-size-10px);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.productos__add--icon {
+  font-size: var(--small-size-16px);
+  color: var(--color-primario);
+}
+
+.productos__list {
+  overflow-x: auto;
+}
+
+.productos__table {
+  width: 500px;
+  border-collapse: collapse;
+}
+
+/* La tabla consigue un width máximo de 500px.
+Al usar la tabla con overflow y no de manera responsive
+indico un ancho absoluto. */
+
+.productos__table th,
+td {
+  text-align: left;
+  font-size: var(--xxsmall-size-12px);
+  padding: var(--spacing-4) var(--spacing-8);
+}
+
+.productos__table th {
+  font-weight: 700;
+  padding-bottom: var(--spacing-8);
+}
+
+.productos__table td {
+  font-weight: 500;
+}
+
+/* Centralizo la primer columna debido al modelo inicial del proyecto. */
+
+.productos__head th:first-child {
+  text-align: center;
+}
+
+.productos__content td:first-child {
+  text-align: center;
+}
+
+/* Alineo a la derecha el último elemento (delete-icon) y
+elimino su padding para que quede alineado con el
+add icon del header en caso de llegar a su máximo width. */
+
+.productos__content td:last-child {
+  text-align: right;
+  padding-right: 0;
+}
+
+.productos__icon {
+  cursor: pointer;
+  max-width: 2rem;
+}
+
+/* ---------------------------------------- Tablet Screen ---------------------------------------- */
+
+@media screen and (min-width: 768px) {
+  /* -------------------- BUSCADOR -------------------- */
+
+  .buscador {
+    /* display: flex; */
+    /* align-items: center; */
+    /* gap: var(--spacing-8); */
+    /* padding: var(--spacing-14); */
+    padding-bottom: var(--spacing-4);
+  }
+
+  .buscador__icon {
+    max-width: 3rem;
+  }
+
+  .buscador__search {
+    /* padding: var(--spacing-4) var(--spacing-12); */
+    /* border: 2px solid var(--background-oscuro); */
+    /* border-radius: 6px; */
+    font-size: var(--xsmall-size-14px);
+    width: 40vw;
+  }
+
+  /* -------------------- PRODUCTOS -------------------- */
+
+  /* .productos {
+    padding: var(--spacing-14);
+  } */
+
+  .productos__header {
+    /* display: flex; */
+    /* justify-content: space-between; */
+    /* align-items: center; */
+    /* padding-bottom: var(--spacing-14); */
+    max-width: 625px;
+  }
+
+  /* Agrego un max-width para que el ancho del header
+  no sobrepase el width total de la tabla. */
+
+  .productos__title {
+    font-size: var(--large-size-24px);
+    /* font-weight: 700; */
+  }
+
+  .productos__add {
+    /* display: flex; */
+    /* align-items: center; */
+    /* gap: var(--spacing-4); */
+    font-size: var(--xsmall-size-14px);
+    /* font-weight: 700; */
+    /* text-transform: uppercase; */
+  }
+
+  .productos__add--icon {
+    font-size: var(--medium-size-20px);
+    /* color: var(--color-primario); */
+  }
+
+  /* .productos__list {
+    overflow-x: auto;
+  } */
+
+  .productos__table {
+    width: 625px;
+    /* border-collapse: collapse; */
+  }
+
+  /* La tabla consigue un width máximo de 625px.
+  Al usar la tabla con overflow y no de manera responsive
+  indico un ancho absoluto. */
+
+  .productos__table th,
+  td {
+    /* text-align: left; */
+    font-size: var(--small-size-16px);
+    padding: var(--spacing-8) var(--spacing-12);
+  }
+
+  .productos__table th {
+    /* font-weight: 700; */
+    padding-bottom: var(--spacing-12);
+  }
+
+  /* .productos__table td {
+    font-weight: 500;
+  } */
+
+  /* Centralizo la primer columna debido al modelo inicial del proyecto. */
+
+  /* .productos__head th:first-child {
+    text-align: center;
+  } */
+
+  /* .productos__content td:first-child {
+    text-align: center;
+  } */
+
+  /* Alineo a la derecha el último elemento (delete-icon) y */
+  /* elimino su padding para que quede alineado con el */
+  /* add icon del header en caso de llegar a su máximo width. */
+
+  /* .productos__content td:last-child {
+    text-align: right;
+    padding-right: 0;
+  } */
+
+  .productos__icon {
+    /* cursor: pointer; */
+    max-width: 3rem;
+  }
+}
+
+/* ---------------------------------------- Desktop Screen ---------------------------------------- */
+
+@media screen and (min-width: 1024px) {
+  /* -------------------- BUSCADOR -------------------- */
+
+  .buscador {
+    /* display: flex; */
+    /* align-items: center; */
+    gap: var(--spacing-12);
+    /* padding: var(--spacing-14); */
+    padding-bottom: var(--spacing-14);
+    padding-top: var(--spacing-24);
+  }
+
+  .buscador__icon {
+    max-width: 4rem;
+  }
+
+  .buscador__search {
+    padding: var(--spacing-8) var(--spacing-20);
+    /* border: 2px solid var(--background-oscuro); */
+    /* border-radius: 6px; */
+    font-size: var(--medium-size-20px);
+    width: 45%;
+  }
+
+  /* -------------------- PRODUCTOS -------------------- */
+
+  /* .productos {
+    padding: var(--spacing-14);
+  } */
+
+  .productos__header {
+    /* display: flex; */
+    /* justify-content: space-between; */
+    /* align-items: center; */
+    padding-bottom: var(--spacing-20);
+    max-width: 1100px;
+  }
+
+  /* Agrego un max-width para que el ancho del header
+  no sobrepase el width total de la tabla. */
+
+  .productos__title {
+    font-size: var(--jumbo-size-38px);
+    /* font-weight: 700; */
+  }
+
+  .productos__add {
+    /* display: flex; */
+    /* align-items: center; */
+    gap: var(--spacing-20);
+    font-size: var(--large-size-24px);
+    /* font-weight: 700; */
+    /* text-transform: uppercase; */
+  }
+
+  .productos__add--icon {
+    font-size: var(--medium-size-20px);
+    /* color: var(--color-primario); */
+  }
+
+  /* .productos__list {
+    overflow-x: auto;
+  } */
+
+  .productos__table {
+    width: 1100px;
+    max-width: 100%;
+    /* border-collapse: collapse; */
+  }
+
+  /* La tabla consigue un width máximo de 1100px.
+  Al usar la tabla con overflow y no de manera responsive
+  indico un ancho absoluto.
+  Indico max-width responsive al achicarse la pantalla
+  hasta llegar a menos de 1024px */
+
+  .productos__table th,
+  td {
+    /* text-align: left; */
+    font-size: var(--large-size-24px);
+    padding: var(--spacing-12) var(--spacing-24);
+  }
+
+  .productos__table th {
+    /* font-weight: 700; */
+    padding-bottom: var(--spacing-12);
+  }
+
+  /* .productos__table td {
+    font-weight: 500;
+  } */
+
+  /* Centralizo la primer columna debido al modelo inicial del proyecto. */
+
+  /* .productos__head th:first-child {
+    text-align: center;
+  } */
+
+  /* .productos__content td:first-child {
+    text-align: center;
+  } */
+
+  /* Alineo a la derecha el último elemento (delete-icon) y */
+  /* elimino su padding para que quede alineado con el */
+  /* add icon del header en caso de llegar a su máximo width. */
+
+  /* .productos__content td:last-child {
+    text-align: right;
+    padding-right: 0;
+  } */
+
+  .productos__icon {
+    /* cursor: pointer; */
+    max-width: 4rem;
+  }
+}
+
+/* --------------------------------------------------------------------------- LOGIN & REGISTER--------------------------------------------------------------------------- */
+
+/* ---------------------------------------- Mobile Screen ---------------------------------------- */
+
+/* -------------------- LOGIN & REGISTER -------------------- */
+
+.body__short-content {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Agregamos .body__short-content para evitar espacios en la pantalla
+cuando el contenido no llegue a ocupar todo el height. */
+
+.account {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-20);
+  padding: var(--spacing-36) var(--spacing-14);
+}
+
+.account__title {
+  font-family: var(--fuente-alternativa);
+  font-size: var(--medium-size-20px);
+  font-weight: 700;
+}
+
+.account__text {
+  font-family: var(--fuente-alternativa);
+  font-size: var(--xsmall-size-14px);
+  font-weight: 500;
+  text-align: center;
+}
+
+.account__form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-20);
+}
+
+.account__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-20);
+}
+
+.account__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: var(--spacing-12);
+}
+
+.account__label {
+  font-size: var(--small-size-16px);
+  font-weight: 400;
+}
+
+.account__input {
+  font-size: var(--xxsmall-size-12px);
+  border: 0;
+  border-bottom: 1px solid var(--color-primario);
+  padding: var(--spacing-2);
+}
+
+.account__enter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-14);
+}
+
+.account__button {
+  font-size: var(--xxsmall-size-12px);
+  font-weight: 400;
+  color: var(--color-fuente-claro);
+  background-color: var(--color-primario);
+  border: 0;
+  padding: var(--spacing-8) var(--spacing-16);
+}
+
+.account__checkbox {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-4);
+}
+
+.account__checkbox--label {
+  font-size: var(--xxsmall-size-12px);
+  font-weight: 400;
+}
+
+.account__olvidar {
+  font-size: var(--xxsmall-size-12px);
+  font-weight: 400;
+  color: var(--color-secundario);
+}
+
+.account__link {
+  font-weight: 400;
+  color: var(--color-secundario);
+}
+
+/* ---------------------------------------- Tablet Screen ---------------------------------------- */
+
+@media screen and (min-width: 768px) {
+  /* -------------------- LOGIN & REGISTER -------------------- */
+
+  /* .body__short-content {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  } */
+
+  /* Agregamos .body__short-content para evitar espacios en la pantalla
+  cuando el contenido no llegue a ocupar todo el height. */
+
+  .account {
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* align-items: center; */
+    gap: var(--spacing-24);
+    padding: var(--spacing-36) var(--spacing-14);
+  }
+
+  .account__title {
+    /* font-family: var(--fuente-alternativa); */
+    font-size: var(--large-size-24px);
+    /* font-weight: 700; */
+  }
+
+  /* .account__text {
+    font-family: var(--fuente-alternativa);
+    font-size: var(--xsmall-size-14px);
+    font-weight: 500;
+    text-align: center;
+  } */
+
+  /* .account__form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-20);
+  } */
+
+  /* .account__list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-20);
+  } */
+
+  .account__content {
+    /* display: flex; */
+    /* justify-content: space-between; */
+    /* align-items: baseline; */
+    gap: var(--spacing-14);
+  }
+
+  /* .account__label {
+    font-size: var(--small-size-16px);
+    font-weight: 400;
+  } */
+
+  .account__input {
+    font-size: var(--xsmall-size-14px);
+    /* border: 0; */
+    border-bottom: 2px solid var(--color-primario);
+    padding: var(--spacing-4) 0;
+  }
+
+  .account__enter {
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    gap: var(--spacing-16);
+  }
+
+  /* .account__button {
+    font-size: var(--xxsmall-size-12px);
+    font-weight: 400;
+    color: var(--color-fuente-claro);
+    background-color: var(--color-primario);
+    border: 0;
+    padding: var(--spacing-8) var(--spacing-16);
+  } */
+
+  .account__checkbox {
+    /* display: flex; */
+    /* align-items: center; */
+    gap: var(--spacing-8);
+  }
+
+  /* .account__checkbox--label {
+    font-size: var(--xxsmall-size-12px);
+    font-weight: 400;
+  } */
+
+  /* .account__olvidar {
+    font-size: var(--xxsmall-size-12px);
+    font-weight: 400;
+    color: var(--color-secundario);
+  } */
+
+  /* .account__link {
+    font-weight: 400;
+    color: var(--color-secundario);
+  } */
+}
+
+/* ---------------------------------------- Desktop Screen ---------------------------------------- */
+
+@media screen and (min-width: 1024px) {
+  /* -------------------- LOGIN & REGISTER -------------------- */
+
+  /* .body__short-content {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  } */
+
+  /* Agregamos .body__short-content para evitar espacios en la pantalla
+  cuando el contenido no llegue a ocupar todo el height. */
+
+  .account {
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* align-items: center; */
+    gap: var(--spacing-28);
+    /* padding: var(--spacing-36) var(--spacing-14); */
+  }
+
+  .account__title {
+    /* font-family: var(--fuente-alternativa); */
+    font-size: var(--jumbo-size-38px);
+    /* font-weight: 700; */
+  }
+
+  .account__text {
+    /* font-family: var(--fuente-alternativa); */
+    font-size: var(--xlarge-size-30px);
+    /* font-weight: 500; */
+    /* text-align: center; */
+  }
+
+  .account__form {
+    /* display: flex; */
+    /* flex-direction: column; */
+    gap: var(--spacing-28);
+  }
+
+  .account__list {
+    /* display: flex; */
+    /* flex-direction: column; */
+    gap: var(--spacing-28);
+  }
+
+  /* .account__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: var(--spacing-14);
+  } */
+
+  .account__label {
+    font-size: var(--large-size-24px);
+    /* font-weight: 400; */
+  }
+
+  .account__input {
+    font-size: var(--small-size-16px);
+    /* border: 0; */
+    /* border-bottom: 2px solid var(--color-primario); */
+    /* padding: var(--spacing-4) 0; */
+  }
+
+  .account__enter {
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    gap: var(--spacing-36);
+  }
+
+  .account__button {
+    font-size: var(--xsmall-size-14px);
+    /* font-weight: 400; */
+    /* color: var(--color-fuente-claro); */
+    /* background-color: var(--color-primario); */
+    /* border: 0; */
+    padding: var(--spacing-8) var(--spacing-24);
+  }
+
+  /* .account__checkbox {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-8);
+  } */
+
+  .account__checkbox--label {
+    font-size: var(--medium-size-18px);
+    /* font-weight: 400; */
+  }
+
+  .account__olvidar {
+    font-size: var(--xsmall-size-14px);
+    /* font-weight: 400; */
+    /* color: var(--color-secundario); */
+  }
+
+  /* .account__link {
+    font-weight: 400;
+    color: var(--color-secundario);
+  } */
+}
+
+/* --------------------------------------------------------------------------- ANIMATIONS --------------------------------------------------------------------------- */
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

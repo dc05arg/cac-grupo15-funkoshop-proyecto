@@ -1,45 +1,126 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Funkoshop</title>
-</head>
-<body>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LOGIN || FunkoShop</title>
+    <link rel="stylesheet" href="./styles/style2.css" />
+    <link rel="icon" href="./img/branding/isotype.svg" type="image/x-icon" />
+  </head>
+  <body class="body__short-content">
     <header>
-  <nav class="nav-header">
-    <a href="/index.html">
-      <img src="/img/branding/logo_light_horizontal.svg" alt="funkoshop-logo" />
-    </a>
+      <nav class="navbar container">
+        <picture class="navbar__img">
+          <a href="./index.html">
+            <img
+              src="./img/branding/logo_light_horizontal.svg"
+              alt="Logo horizontal Funko Shop"
+            />
+          </a>
+        </picture>
 
-    <ul>
-      <li><a href="/shop.html">VER TIENDA</a></li>
-      <li><a href="/admin.html">ADMIN</a></li>
-      <li><a href="/index.html">SALIR</a></li>
-    </ul>
-  </nav>
-</header>
-<main>
-    <h1>INGRESAR A MI CUENTA</h1>
-    <section>
-        <form>
-            <div>
-            <label for="email"> Email:</label>
-            <input type="email" name="email" id="email" placeholder="nombre@mail.com">
+        <div class="navbar__icon">
+          <iconify-icon icon="mingcute:menu-line"></iconify-icon>
+        </div>
+
+        <ul class="navbar__menu">
+          <li class="navbar__item">
+            <a class="navbar__link" href="./shop.html">VER TIENDA</a>
+          </li>
+          <li class="navbar__item">
+            <a class="navbar__link" href="./admin.html">ADMIN</a>
+          </li>
+          <li class="navbar__item">
+            <a class="navbar__link" href="./index.html">SALIR</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="account container">
+        <h1 class="account__title">INGRESAR A MI CUENTA</h1>
+
+        <form class="account__form" action="" method="post">
+          <ul class="account__list">
+            <li class="account__content">
+              <label class="account__label" for="email">Email:</label>
+              <input
+                class="account__input"
+                type="email"
+                name="email"
+                id="email"
+                placeholder="ejemplo@funkoshop.com"
+              />
+            </li>
+
+            <li class="account__content">
+              <label class="account__label" for="password">Contraseña:</label>
+              <input
+                class="account__input"
+                type="password"
+                name="password"
+                id="password"
+                placeholder="********"
+              />
+            </li>
+          </ul>
+
+          <div class="account__enter">
+            <input class="account__button" type="button" value="Ingresar" />
+
+            <div class="account__checkbox">
+              <input
+                class="account__checkbox--input"
+                type="checkbox"
+                name="recordarme"
+                id="recordarme"
+              />
+              <label class="account__checkbox--label" for="recordarme">
+                Recordarme
+              </label>
             </div>
-            <div>
-            <label for="password">Contraseña:</label>
-            <input type="password" name="password" id="password" placeholder="Contraseña">
-            </div>
-            <div>
-            <button type="submit">Ingresar</button>
-            <label>
-                <input type="checkbox" name="recordarme">
-                    Recordarme
-                </label>
-            </div>
-            <div>
-                <a href="./index.html">
-                    <h3>Olvide mi contraseña</h3>
-                </a>
-            </div>
+          </div>
+        </form>
+
+        <a class="account__olvidar" href="">Olvidé mi contraseña</a>
+
+        <a class="account__olvidar" href="./register.html">
+          ¿No tienes una cuenta? Regístrate
+        </a>
+      </section>
+    </main>
+
+    <footer>
+      <section class="navbar container">
+        <ul class="navbar__footer">
+          <li class="navbar__item">
+            <a class="navbar__link" href="./shop.html">SHOP</a>
+          </li>
+          <li class="navbar__item">
+            <a class="navbar__link" href="./register.html"> REGISTRARSE </a>
+          </li>
+          <li class="navbar__item">
+            <a class="navbar__link" href="./login.html">INGRESAR</a>
+          </li>
+          <li class="navbar__item">
+            <a class="navbar__link" href="./contacto.html"> CONTACTO </a>
+          </li>
+        </ul>
+
+        <picture class="navbar__img">
+          <a href="./index.html">
+            <img src="./img/branding/isotype.svg" alt="Logo Funko Shop" />
+          </a>
+        </picture>
+      </section>
+
+      <p class="copyright container">
+        All rights reserved 2023 - Funkoshop &copy;
+      </p>
+    </footer>
+
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <script src="./script/script.js"></script>
+  </body>
+</html>

@@ -3,96 +3,61 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HOME || FunkoShop</title>
     <link rel="stylesheet" href="./styles/style.css" />
-    <title>HOME</title>
+    <link rel="stylesheet" href="./styles/headerfooter.css" />
+    <link rel="icon" href="./img/branding/isotype.svg" type="image/x-icon" />
   </head>
   <body>
     <header>
-      <div class="header-content">
-        <img
-          class="funkoshop-logo"
-          src="img/branding/logo_light_horizontal.svg"
-          alt="funkoshop-logo"
-        />
-        <nav class="nav-header">
-          <svg
-            class="menu-icon"
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-          >
-            <g
-              fill="none"
-              stroke="currentColor"
-              stroke-dasharray="24"
-              stroke-dashoffset="24"
-              stroke-linecap="round"
-              stroke-width="2"
-            >
-              <path d="M5 5H19">
-                <animate
-                  fill="freeze"
-                  attributeName="stroke-dashoffset"
-                  dur="0.2s"
-                  values="24;0"
-                />
-              </path>
-              <path d="M5 12H19">
-                <animate
-                  fill="freeze"
-                  attributeName="stroke-dashoffset"
-                  begin="0.2s"
-                  dur="0.2s"
-                  values="24;0"
-                />
-              </path>
-              <path d="M5 19H19">
-                <animate
-                  fill="freeze"
-                  attributeName="stroke-dashoffset"
-                  begin="0.4s"
-                  dur="0.2s"
-                  values="24;0"
-                />
-              </path>
-            </g>
-          </svg>
-          <ul class="nav-list">
-            <li>
-              <a class="nvha" href="shop.html">
-                SHOP
-                <i class="chevron-shop">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="28"
-                    height="28"
-                    viewBox="0 0 28 28"
-                  >
-                    <g transform="rotate(180 14 14)">
-                      <path
-                        fill="currentColor"
-                        d="M23.707 18.707a1 1 0 0 1-1.414 0L14 10.414l-8.293 8.293a1 1 0 0 1-1.414-1.414l9-9a1 1 0 0 1 1.414 0l9 9a1 1 0 0 1 0 1.414Z"
-                      />
-                    </g>
-                  </svg>
-                </i>
-              </a>
-            </li>
-            <li><a class="nvha" href="contacto.html">CONTACTO</a></li>
-            <li><a class="nvha" href="login.html">LOGIN</a></li>
-            <li>
-              <a class="nvha" href="carrito.html">
-                <img
-                  class="cart-icon"
-                  src="img/icons/cart-icon.svg"
-                  alt="cart"
-                />
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </div>
+      <nav class="navbar container">
+        <picture class="navbar__img">
+          <a href="./index.html">
+            <img
+              src="./img/branding/logo_light_horizontal.svg"
+              alt="Logo Horizontal Funko Shop"
+            />
+          </a>
+        </picture>
+
+        <div class="navbar__icon">
+          <iconify-icon icon="mingcute:menu-line"></iconify-icon>
+        </div>
+
+        <ul class="navbar__menu">
+          <li class="navbar__item navbar__desplegable">
+            <a class="navbar__link" href="./shop.html">
+              SHOP
+              <iconify-icon
+                class="navbar__shop--chevron"
+                icon="ion:chevron-down-outline"
+              ></iconify-icon>
+            </a>
+            <ul class="navbar__submenu">
+              <li class="navbar__subitem">
+                <a class="navbar__sublink" href="./shop.html">Funkos</a>
+              </li>
+              <li class="navbar__subitem">
+                <a class="navbar__sublink" href="./shop.html">Remeras</a>
+              </li>
+              <li class="navbar__subitem">
+                <a class="navbar__sublink" href="./shop.html">Llaveros</a>
+              </li>
+            </ul>
+          </li>
+          <li class="navbar__item">
+            <a class="navbar__link" href="./contacto.html"> CONTACTO </a>
+          </li>
+          <li class="navbar__item">
+            <a class="navbar__link" href="./login.html">LOGIN</a>
+          </li>
+          <li class="navbar__item">
+            <a class="navbar__cart" href="./carrito.html">
+              <img src="./img/icons/cart-icon.svg" alt="Cart icon" />
+            </a>
+          </li>
+        </ul>
+      </nav>
     </header>
 
     <div class="banner">
@@ -192,22 +157,34 @@
     </main>
 
     <footer>
-      <nav id="nav-footer">
-        <ul class="nav-f-u">
-          <li class="nav-f-i"><a class="nvha" href="shop.html">SHOP</a></li>
-          <li class="nav-f-i">
-            <a class="nvha" href="ingresar.html">INGRESAR</a>
+      <section class="navbar container">
+        <ul class="navbar__footer">
+          <li class="navbar__item">
+            <a class="navbar__link" href="./shop.html">SHOP</a>
           </li>
-          <li class="nav-f-i">
-            <a class="nvha" href="contacto.html">CONTACTO</a>
+          <li class="navbar__item">
+            <a class="navbar__link" href="./register.html"> REGISTRARSE </a>
+          </li>
+          <li class="navbar__item">
+            <a class="navbar__link" href="./login.html">INGRESAR</a>
+          </li>
+          <li class="navbar__item">
+            <a class="navbar__link" href="./contacto.html"> CONTACTO </a>
           </li>
         </ul>
-      </nav>
-      <img src="img/branding/isotype.svg" alt="funko-logo" class="isotype" />
-      <div class="copyrightdiv">
-        <p class="copyright">All rights reserved 2023 - Funkoshop &copy;</p>
-      </div>
+
+        <picture class="navbar__img">
+          <a href="./index.html">
+            <img src="./img/branding/isotype.svg" alt="Logo Funko Shop" />
+          </a>
+        </picture>
+      </section>
+
+      <p class="copyright container">
+        All rights reserved 2023 - Funkoshop &copy;
+      </p>
     </footer>
+
     <script src="./script/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.7/dist/iconify-icon.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>

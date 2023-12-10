@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CREATE || FunkoShop</title>
+    <link rel="stylesheet" href="./styles/style2.css" />
+    <link rel="icon" href="./img/branding/isotype.svg" type="image/x-icon" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar container">
+        <picture class="navbar__img">
+          <a href="./index.html">
+            <img
+              src="./img/branding/logo_light_horizontal.svg"
+              alt="Logo horizontal Funko Shop"
+            />
+          </a>
+        </picture>
+
+        <div class="navbar__icon">
+          <iconify-icon icon="mingcute:menu-line"></iconify-icon>
+        </div>
+
+        <ul class="navbar__menu">
+          <li class="navbar__item">
+            <a class="navbar__link" href="./shop.html">VER TIENDA</a>
+          </li>
+          <li class="navbar__item">
+            <a class="navbar__link" href="./admin.html">ADMIN</a>
+          </li>
+          <li class="navbar__item">
+            <a class="navbar__link" href="./index.html">SALIR</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="create">
+        <h1 class="create_title">CREAR NUEVO ITEM</h1>
+
+        <form class="create__form" action="" method="post">
+          <div class="create__content">
+            <label class="create__label" for="categoria">Categoría:</label>
+            <select class="create__select" name="categoria" id="categoria">
+              <option value="" disabled selected hidden>Seleccionar</option>
+              <option value="figura">Figuras</option>
+            </select>
+          </div>
+
+          <div class="create__content">
+            <label class="create__label" for="licencia">Licencia:</label>
+            <select class="create__select" name="licencia" id="licencia">
+              <option value="" disabled selected hidden>Seleccionar</option>
+              <option value="star-wars">Star Wars</option>
+              <option value="harry-potter">Harry Potter</option>
+              <option value="pokemon">Pokemon</option>
+              <option value="naruto-shippuden">Naruto Shippuden</option>
+            </select>
+          </div>
+
+          <div class="create__content">
+            <label class="create__label" for="nombre">
+              Nombre del producto:
+            </label>
+            <input
+              class="create__name"
+              type="text"
+              name="nombre"
+              id="nombre"
+              placeholder="Kakashi Hatake Shippuden Saga"
+            />
+          </div>
+
+          <div class="create__content">
+            <textarea
+              class="create__description"
+              name="descripcion"
+              id="descripcion"
+              cols="30"
+              rows="10"
+              placeholder="Descripción del producto"
+            >
+            </textarea>
+          </div>
+
+          <div class="create__content">
+            <label class="create__label" for="sku">SKU</label>
+            <input
+              class="create__sku"
+              type="text"
+              name="sku"
+              id="sku"
+              placeholder="SSK111AB001"
+            />
+          </div>
+
+          <div class="create__content">
+            <label class="create__label" for="precio">Precio:</label>
+            <input
+              class="create__price"
+              type="number"
+              name="precio"
+              id="precio"
+              placeholder="$0.000,00"
+            />
+          </div>
+
+          <div class="create__content">
+            <label class="create__label" for="stock">Stock:</label>
+            <input
+              class="create__stock"
+              type="number"
+              name="stock"
+              id="stock"
+              placeholder="0"
+            />
+          </div>
+
+          <div class="create__content">
+            <label class="create__label" for="descuento">Descuento</label>
+            <input
+              class="create__descuento"
+              type="number"
+              name="descuento"
+              id="descuento"
+              placeholder="0%"
+            />
+          </div>
+
+          <div class="create__content">
+            <label class="create__label" for="cuotas">Cuotas:</label>
+            <select class="create__select" name="cuotas" id="cuotas">
+              <option value="tres-cuotas" selected>3 Cuotas sin interés</option>
+              <option value="seis-cuotas">6 Cuotas sin interés</option>
+              <option value="doce-cuotas">12 Cuotas sin interés</option>
+            </select>
+          </div>
+
+          <div class="create__content">
+            <label class="create__label" for="imagenes">Imágenes:</label>
+            <input
+              class="create__image"
+              type="file"
+              name="imagenes"
+              id="imagenes"
+            />
+          </div>
+
+          <input
+            class="create__button"
+            type="button"
+            value="Agregar Producto"
+          />
+          <input class="create__button" type="reset" value="Limpiar" />
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <section class="navbar container">
+        <ul class="navbar__footer">
+          <li class="navbar__item">
+            <a class="navbar__link" href="./shop.html">SHOP</a>
+          </li>
+          <li class="navbar__item">
+            <a class="navbar__link" href="./register.html"> REGISTRARSE </a>
+          </li>
+          <li class="navbar__item">
+            <a class="navbar__link" href="./login.html">INGRESAR</a>
+          </li>
+          <li class="navbar__item">
+            <a class="navbar__link" href="./contacto.html"> CONTACTO </a>
+          </li>
+        </ul>
+
+        <picture class="navbar__img">
+          <a href="./index.html">
+            <img src="./img/branding/isotype.svg" alt="Logo Funko Shop" />
+          </a>
+        </picture>
+      </section>
+
+      <p class="copyright container">
+        All rights reserved 2023 - Funkoshop &copy;
+      </p>
+    </footer>
+
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <script src="./script/script.js"></script>
+  </body>
+</html>
