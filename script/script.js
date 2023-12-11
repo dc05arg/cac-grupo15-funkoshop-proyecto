@@ -42,7 +42,7 @@ const funkoData = [
   {
     imgSrc: "img/harry-potter/harry-1.webp",
     hover: "img/harry-potter/harry-box.webp",
-    title: "HARRY",
+    title: "HARRY POTTER",
     category: "HARRY POTTER",
     price: "$ 1799,99",
     cuotas: "3 cuotas sin interés",
@@ -50,7 +50,7 @@ const funkoData = [
   {
     imgSrc: "img/harry-potter/hermione-1.webp",
     hover: "img/harry-potter/hermione-box.webp",
-    title: "HERMIONE",
+    title: "HERMIONE GRANGER",
     category: "HARRY POTTER",
     price: "$ 1799,99",
     cuotas: "3 cuotas sin interés",
@@ -98,7 +98,7 @@ const funkoData = [
   {
     imgSrc: "img/star-wars/baby-yoda-1.webp",
     hover: "img/star-wars/baby-yoda-box.webp",
-    title: "BABY YODA",
+    title: "BABY YODA BLUEBALL",
     category: "STAR-WARS",
     price: "$ 1799,99",
     cuotas: "3 cuotas sin interés",
@@ -106,7 +106,7 @@ const funkoData = [
   {
     imgSrc: "img/star-wars/bobbafeth-1.webp",
     hover: "img/star-wars/bobbafeth-box.webp",
-    title: "BOBBAFETH",
+    title: "BOBA FETT",
     category: "STAR-WARS",
     price: "$ 1799,99",
     cuotas: "3 cuotas sin interés",
@@ -114,7 +114,7 @@ const funkoData = [
   {
     imgSrc: "img/star-wars/luke-1.webp",
     hover: "img/star-wars/luke-box.webp",
-    title: "BABY YODA",
+    title: "LUKE SKYWALKER WITH GROGU",
     category: "STAR-WARS",
     price: "$ 1799,99",
     cuotas: "3 cuotas sin interés",
@@ -122,31 +122,36 @@ const funkoData = [
 ];
 
 document.addEventListener("DOMContentLoaded", function () {
-  const glideContainer = document.querySelector(".glide__slides");
+  const glideContainer = document.querySelector(".slider__list");
 
   function createFunkoItem(data) {
-    const funkoItem = document.createElement("div");
-    funkoItem.className = "funko-item glide__slide";
+    const funkoItem = document.createElement("li");
+    funkoItem.className = "slider__item glide__slide";
     funkoItem.innerHTML = `
-    <img src="${data.imgSrc}" alt="${data.title}" class="lanz-img">
-    <div class="nuevo"><p class="nuevo">NUEVO</p></div>
-    <h5>${data.category}</h5>
-    <h6>${data.title}</h6>
-    <p class="price">${data.price}</p>
-    <p class="cuotas">${data.cuotas}</p>
-  `;
-
-    // Agrega el evento de hover al elemento creado
-    funkoItem.addEventListener("mouseover", function () {
-      const imgElement = this.querySelector(".lanz-img");
-      imgElement.src = data.hover || data.imgSrc;
-    });
-
-    // Restaura la imagen original al salir del hover
-    funkoItem.addEventListener("mouseleave", function () {
-      const imgElement = this.querySelector(".lanz-img");
-      imgElement.src = data.imgSrc;
-    });
+            <article class="card-item">
+              <a class="card-item__link" href="./item.html">
+                <picture class="card-item__img">
+                  <span class="card-item__tag">NUEVO</span>
+                  <img
+                    class="card-item__img--front"
+                    src="${data.imgSrc}"
+                    alt="${data.title}"
+                  />
+                  <img
+                    class="card-item__img--back"
+                    src="${data.hover}"
+                    alt="${data.title} BOX"
+                  />
+                </picture>
+                <div class="card-item__content">
+                  <p class="card-item__license">${data.category}</p>
+                  <h3 class="card-item__name">${data.title}</h3>
+                  <p class="card-item__price">${data.price}</p>
+                  <p class="card-item__offer">${data.cuotas}</p>
+                </div>
+              </a>
+            </article>
+`;
 
     glideContainer.appendChild(funkoItem);
   }
@@ -162,18 +167,11 @@ document.addEventListener("DOMContentLoaded", function () {
     type: "carousel",
     startAt: 0,
     perView: 3,
-    gap: 30,
+    gap: 15,
     breakpoints: {
-      991: {
+      767: {
         perView: 2,
       },
-      768: {
-        perView: 1,
-      },
-    },
-    navigation: {
-      prevEl: ".glide__arrow--prev",
-      nextEl: ".glide__arrow--next",
     },
   }).mount();
 });

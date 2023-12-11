@@ -262,19 +262,31 @@ select {
 /* Media screen celular */
 
 @media screen and (max-width: 768px) {
-  .main {
-    margin: 0 1rem;
+  .main-funko {
+    max-width: 100vw;
   }
+
+  .main {
+    grid-template-columns: 1fr;
+  }
+
   .main-funko-group {
-    grid-template-columns: repeat(2, 1fr);
+    max-width: 100vw;
+    grid-template-columns: 1fr;
   }
 }
 
 @media screen and (max-width: 320px) {
-  .main {
-    margin: 0 1rem;
+  .main-funko {
+    max-width: 100vw;
   }
+
+  .main {
+    grid-template-columns: 1fr;
+  }
+
   .main-funko-group {
+    max-width: 100vw;
     grid-template-columns: 1fr;
   }
 }

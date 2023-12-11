@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HOME || FunkoShop</title>
     <link rel="stylesheet" href="./styles/style.css" />
-    <link rel="stylesheet" href="./styles/headerfooter.css" />
     <link rel="icon" href="./img/branding/isotype.svg" type="image/x-icon" />
   </head>
   <body>
@@ -60,100 +59,87 @@
       </nav>
     </header>
 
-    <div class="banner">
-      <div class="banner-img"></div>
-      <div class="banner-content">
-        <h2>Nuevos Ingresos</h2>
-        <p class="slogan">Descubrí el próximo Funko Pop de tu colección</p>
-        <button class="btn-shop">SHOP</button>
-      </div>
-    </div>
+    <section class="banner">
+      <article class="banner__content container">
+        <h2 class="banner__title">Nuevos ingresos</h2>
+        <p class="banner__text">
+          Descubrí el próximo Funko Pop de tu colección
+        </p>
+        <a class="banner__link" href="./pages/tienda/shop.html">SHOP</a>
+      </article>
+    </section>
 
-    <main>
-      <div class="colec-conteiner">
-        <div id="star-wars" class="colecciones ab">
-          <div class="section-a">
-            <h3>STAR WARS & <br />THE MANDALORIAN</h3>
-            <p>
-              Disfruta de una saga que sigue <br />agregando personajes de su
-              colección.
-            </p>
-            <div class="line"></div>
-            <a class="a-ver" href="">
-              <button class="ver-btn">VER COLECCIÓN</button>
-            </a>
-          </div>
-          <div class="section-b">
-            <img
-              src="img/star-wars/baby-yoda-1.webp"
-              alt="baby yoda"
-              class="colec-img"
-            />
-          </div>
-        </div>
-        <div id="pokemon" class="colecciones ba">
-          <div class="section-a">
-            <h3>POKEMON INDIGO</h3>
-            <p>
-              Atrapa todos los que puedas y disfruta <br />de una colección
-              llena de amigos.
-            </p>
-            <div class="line"></div>
-            <a class="a-ver" href="">
-              <button class="ver-btn">VER COLECCIÓN</button>
-            </a>
-          </div>
-          <div class="section-b">
-            <img
-              src="img/pokemon/vulpix-1.webp"
-              alt="vulpix"
-              class="colec-img"
-            />
-          </div>
-        </div>
-        <div id="harry-potter" class="colecciones ab">
-          <div class="section-a">
-            <h3>HARRY POTTER</h3>
-            <p>
-              Revive los recuerdos de una saga llena<br />de magia y encanto.
-            </p>
-            <div class="line"></div>
-            <a class="a-ver" href="">
-              <button class="ver-btn">VER COLECCIÓN</button>
-            </a>
-          </div>
-          <div class="section-b">
-            <img
-              src="img/harry-potter/snape-patronus-1.webp"
-              alt="snape patronus"
-              class="colec-img"
-            />
-          </div>
-        </div>
-      </div>
+    <main class="home">
+      <section class="colecciones container">
+        <article class="colecciones__content">
+          <h3 class="colecciones__title">Star Wars & The Mandalorian</h3>
+          <p class="colecciones__text">
+            Disfruta de una saga que sigue agregando personajes a su colección.
+          </p>
+          <div class="colecciones__line"></div>
+          <a class="colecciones__link" href="">VER COLECCIÓN</a>
+        </article>
 
-      <div class="lanzamientos">
-        <h4>ULTIMOS LANZAMIENTOS</h4>
-        <div class="lanz-container glide">
-          <div class="glide__track" data-glide-el="track">
-            <div class="glide__slides"></div>
-            <div class="glide__arrows" data-glide-el="controls">
-              <button
-                class="glide__arrow glide__arrow--left"
-                data-glide-dir="<"
-              >
-                <iconify-icon icon="tabler:chevron-left"></iconify-icon>
-              </button>
-              <button
-                class="glide__arrow glide__arrow--right"
-                data-glide-dir=">"
-              >
-                <iconify-icon icon="tabler:chevron-right"></iconify-icon>
-              </button>
-            </div>
-          </div>
+        <picture class="colecciones__img">
+          <img src="./img/star-wars/baby-yoda-1.webp" alt="Baby Yoda" />
+        </picture>
+      </section>
+
+      <section class="colecciones container">
+        <article class="colecciones__content">
+          <h3 class="colecciones__title">POKEMON INDIGO</h3>
+          <p class="colecciones__text">
+            Atrapa todos los que puedas y disfruta de una colección llena de
+            amigos
+          </p>
+          <div class="colecciones__line"></div>
+          <a class="colecciones__link" href="">VER COLECCIÓN</a>
+        </article>
+
+        <picture class="colecciones__img">
+          <img src="./img/pokemon/vulpix-1.webp" alt="Vulpix" />
+        </picture>
+      </section>
+
+      <section class="colecciones container">
+        <article class="colecciones__content">
+          <h3 class="colecciones__title">HARRY POTTER</h3>
+          <p class="colecciones__text">
+            Revive los recuerdos de una saga llena de magia y encanto
+          </p>
+          <div class="colecciones__line"></div>
+          <a class="colecciones__link" href="">VER COLECCIÓN</a>
+        </article>
+
+        <picture class="colecciones__img">
+          <img
+            src="./img/harry-potter/snape-patronus-1.webp"
+            alt="Snape Patronus"
+          />
+        </picture>
+      </section>
+
+      <section class="slider container glide">
+        <h3 class="slider__title">ÚLTIMOS LANZAMIENTOS</h3>
+        <div class="glide__track" data-glide-el="track">
+          <ul class="slider__list glide__slides"></ul>
         </div>
-      </div>
+
+        <div class="glide__arrows" data-glide-el="controls">
+          <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
+            <iconify-icon
+              class="slider__chevron"
+              icon="tabler:chevron-left"
+            ></iconify-icon>
+          </button>
+          <button class="glide__arrow glide__arrow--right" data-glide-dir=">">
+            <iconify-icon
+              class="slider__chevron"
+              icon="tabler:chevron-right"
+            ></iconify-icon>
+          </button>
+        </div>
+      </section>
     </main>
 
     <footer>

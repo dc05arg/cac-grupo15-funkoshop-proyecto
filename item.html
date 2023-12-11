@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ITEM || FunkoShop</title>
-    <link rel="stylesheet" href="./styles/style2.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
     <link rel="icon" href="./img/branding/isotype.svg" type="image/x-icon" />
   </head>
   <body>
@@ -115,87 +115,26 @@
         </a>
       </section>
 
-      <section class="novedades container">
-        <h3 class="novedades__title">PRODUCTOS RELACIONADOS</h3>
-        <ul class="novedades__list">
-          <li class="novedades__item">
-            <article class="card-item">
-              <a class="card-item__link" href="./item.html">
-                <picture class="card-item__img">
-                  <span class="card-item__tag">NUEVO</span>
-                  <img
-                    class="card-item__img--front"
-                    src="./img/star-wars/trooper-1.webp"
-                    alt="Stormtrooper Lightsaber"
-                  />
-                  <img
-                    class="card-item__img--back"
-                    src="./img/star-wars/trooper-box.webp"
-                    alt="Stormtrooper Lightsaber box"
-                  />
-                </picture>
-                <div class="card-item__content">
-                  <p class="card-item__license">STAR WARS</p>
-                  <h3 class="card-item__name">STORMTROOPER LIGHTSABER</h3>
-                  <p class="card-item__price">$ 1799,99</p>
-                  <p class="card-item__offer">3 CUOTAS SIN INTERÉS</p>
-                </div>
-              </a>
-            </article>
-          </li>
+      <section class="slider container glide">
+        <h3 class="slider__title">PRODUCTOS RELACIONADOS</h3>
+        <div class="glide__track" data-glide-el="track">
+          <ul class="slider__list glide__slides"></ul>
+        </div>
 
-          <li class="novedades__item">
-            <article class="card-item">
-              <a class="card-item__link" href="./item.html">
-                <picture class="card-item__img">
-                  <span class="card-item__tag">NUEVO</span>
-                  <img
-                    class="card-item__img--front"
-                    src="./img/pokemon/pidgeotto-1.webp"
-                    alt="Pidgeotto"
-                  />
-                  <img
-                    class="card-item__img--back"
-                    src="./img/pokemon/pidgeotto-box.webp"
-                    alt="Pidgeotto Box"
-                  />
-                </picture>
-                <div class="card-item__content">
-                  <p class="card-item__license">POKEMON</p>
-                  <h3 class="card-item__name">PIDGEOTTO</h3>
-                  <p class="card-item__price">$ 1799,99</p>
-                  <p class="card-item__offer">3 CUOTAS SIN INTERÉS</p>
-                </div>
-              </a>
-            </article>
-          </li>
-
-          <li class="novedades__item">
-            <article class="card-item">
-              <a class="card-item__link" href="./item.html">
-                <picture class="card-item__img">
-                  <span class="card-item__tag">NUEVO</span>
-                  <img
-                    class="card-item__img--front"
-                    src="./img/harry-potter/luna-1.webp"
-                    alt="Luna Lovegood Lion Mask"
-                  />
-                  <img
-                    class="card-item__img--back"
-                    src="./img/harry-potter/luna-box.webp"
-                    alt="Luna Lovegood Lion Mask Box"
-                  />
-                </picture>
-                <div class="card-item__content">
-                  <p class="card-item__license">HARRY POTTER</p>
-                  <h3 class="card-item__name">LUNA LOVEGOOD LION MASK</h3>
-                  <p class="card-item__price">$ 1799,99</p>
-                  <p class="card-item__offer">3 CUOTAS SIN INTERÉS</p>
-                </div>
-              </a>
-            </article>
-          </li>
-        </ul>
+        <div class="glide__arrows" data-glide-el="controls">
+          <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
+            <iconify-icon
+              class="slider__chevron"
+              icon="tabler:chevron-left"
+            ></iconify-icon>
+          </button>
+          <button class="glide__arrow glide__arrow--right" data-glide-dir=">">
+            <iconify-icon
+              class="slider__chevron"
+              icon="tabler:chevron-right"
+            ></iconify-icon>
+          </button>
+        </div>
       </section>
     </main>
 
@@ -229,6 +168,7 @@
     </footer>
 
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
     <script src="./script/script.js"></script>
   </body>
 </html>
