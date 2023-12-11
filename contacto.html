@@ -60,10 +60,52 @@
     </header>
 
     <main>
-      <section class="contact">
-        <h1 class="contact__title">CONTACTO</h1>
+      <section class="create container">
+        <h1 class="create__title">CONTACTO</h1>
 
-        <form class="contact__form" action="" method="post"></form>
+        <form class="create__form" action="" method="post">
+          <div class="create__content">
+            <label class="create__label" for="nombre">
+              Nombre:
+              <input
+                class="create__input create__name"
+                type="text"
+                name="nombre"
+                id="nombre"
+                placeholder="Marcelo Gallardo"
+              />
+            </label>
+          </div>
+
+          <div class="create__content">
+            <label class="create__label" for="nombre">
+              Mail:
+              <input
+                class="create__input create__name"
+                type="email"
+                name="nombre"
+                id="nombre"
+                placeholder="marcelogallardo@madrid912.com"
+              />
+            </label>
+          </div>
+
+          <div class="create__content">
+            <textarea
+              class="create__description"
+              name="descripcion"
+              id="descripcion"
+              cols="50"
+              rows="8"
+              placeholder="Detalle de su consulta."
+            ></textarea>
+          </div>
+
+          <div class="create__content">
+            <input class="create__button" type="submit" value="Enviar" />
+            <input class="create__button" type="reset" value="Limpiar" />
+          </div>
+        </form>
       </section>
     </main>
 
