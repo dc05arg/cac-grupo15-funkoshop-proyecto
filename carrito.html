@@ -83,15 +83,21 @@
                 <div class="cart-item__detail">
                   <h3 class="cart-item__name">BABY YODA BLUEBALL</h3>
                   <p class="cart-item__license">STAR WARS</p>
-                  <p class="cart-item__price">Precio unitario: $1799,99</p>
+                  <p class="cart-item__price">Precio unitario: $ <span class="value__item">1799.99</span></p>
                 </div>
               </div>
 
-              <div class="cart-item__cantidad">
-                <input type="number" value="2" />
+              <div class="cart-item__cantidad ">
+                <div class="flex">
+              <input class="item__cantidad" placeholder="0"/>
+              <div class="amount_buttons">
+                <button class="amount_button increment">+</button>
+                <button class="amount_button decrement">-</button>
+              </div>
+            </div>
               </div>
 
-              <p class="cart-item__total">$ 3599,98</p>
+              <p class="cart-item__total">$ <span class="value__total"></span></p>
 
               <iconify-icon
                 class="cart-item__close"
@@ -110,15 +116,21 @@
                 <div class="cart-item__detail">
                   <h3 class="cart-item__name">PIDGEOTTO</h3>
                   <p class="cart-item__license">POKEMON</p>
-                  <p class="cart-item__price">Precio unitario: $1799,99</p>
+                  <p class="cart-item__price">Precio unitario: $ <span class="value__item">1799.99</span></p>
                 </div>
               </div>
 
               <div class="cart-item__cantidad">
-                <input type="number" value="1" />
+               <div class="flex">
+              <input class="item__cantidad" placeholder="0"/>
+              <div class="amount_buttons">
+                <button class="amount_button increment">+</button>
+                <button class="amount_button decrement">-</button>
+              </div>
+            </div>
               </div>
 
-              <p class="cart-item__total">$ 1799,99</p>
+              <p class="cart-item__total">$ <span class="value__total"></span></p>
 
               <iconify-icon
                 class="cart-item__close"
@@ -135,19 +147,19 @@
         <article class="resumen__content">
           <div class="resumen__div">
             <p class="resumen__detail">CANTIDAD DE ELEMENTOS</p>
-            <p class="resumen__value">3</p>
+            <p class="resumen__value"><span class="resumen_cantidad"></span></p>
           </div>
           <div class="resumen__div">
             <p class="resumen__detail">SUBTOTAL</p>
-            <p class="resumen__value">$ 5.399,97</p>
+            <p class="resumen__value">$ <span class="resumen_subtotal"></span></p>
           </div>
           <div class="resumen__div">
             <p class="resumen__detail">ENVIO</p>
-            <p class="resumen__value">$ 0,00</p>
+            <p class="resumen__value">$ <span class="resumen_envio"></span></p>
           </div>
           <div class="resumen__div resumen__total">
             <p class="resumen__detail">TOTAL</p>
-            <p class="resumen__value">$ 5.399,97</p>
+            <p class="resumen__value">$ <span class="resumen_total"></span></p>
           </div>
         </article>
 
@@ -185,6 +197,7 @@
     </footer>
 
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <script src="./script/carrito.js"></script>
     <script src="./script/script.js"></script>
   </body>
 </html>

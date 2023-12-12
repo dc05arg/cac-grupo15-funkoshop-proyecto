@@ -1131,6 +1131,7 @@ que el resto se expanda de manera responsive. */
 
 .cart-item__cantidad {
   max-width: 17.5vw;
+  min-width: 10%;
   padding: var(--spacing-8);
   justify-self: center;
 }
@@ -1142,6 +1143,7 @@ que el resto se expanda de manera responsive. */
 }
 
 .cart-item__total {
+  min-width: 10%;
   font-size: var(--xsmall-size-14px);
   font-weight: 400;
   color: var(--color-fuente-gris);
@@ -1670,6 +1672,35 @@ dejo que el resto se coloque de manera responsive. */
 }
 
 /* --------------------------------------------------------------------------- ITEM --------------------------------------------------------------------------- */
+.flex{
+  display: flex ;
+}
+.amount_buttons{
+  display: flex;
+  flex-direction: column;
+  margin-left: 5px;
+  gap: 2px;
+}
+.amount_button{
+  width: 30px;
+  background-color: var(--color-fuente-gris);
+  color: var(--background-claro);
+  text-decoration: none;
+  border: none;
+  height: 100%;
+  font-size: 20px;
+  transition: background-color .2s;
+}
+
+.amount_button:hover{
+  background-color: var(--color-primario-50);
+  color: var(--color-fuente-oscuro);
+  cursor: pointer;
+}
+.amount_button:active{
+  background-color: var(--color-primario);
+}
+
 
 /* ---------------------------------------- Mobile Screen ---------------------------------------- */
 
@@ -1740,7 +1771,7 @@ fuera del article para poder ubicarlos correctamente en la grilla.*/
 }
 
 .item__cantidad {
-  max-width: 20%;
+  max-width: 30%;
   text-align: center;
   font-size: var(--xxsmall-size-12px);
   padding: var(--spacing-4) var(--spacing-8);
@@ -1753,6 +1784,11 @@ fuera del article para poder ubicarlos correctamente en la grilla.*/
   color: var(--color-fuente-claro);
   border: 0;
   font-weight: 400;
+  transition: background-color .3s;
+}
+.item__add-cart:hover {
+  background-color: var(--background-oscuro);
+  cursor: pointer;
 }
 
 .item__pago {

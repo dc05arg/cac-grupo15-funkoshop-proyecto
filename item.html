@@ -78,7 +78,13 @@
           <p class="item__price">$ 1799,99</p>
 
           <div class="item__carrito--article">
-            <input class="item__cantidad" type="number" placeholder="0" />
+            <div class="flex">
+              <input class="item__cantidad" placeholder="0"/>
+              <div class="amount_buttons">
+                <button class="amount_button increment">+</button>
+                <button class="amount_button decrement">-</button>
+              </div>
+            </div>
             <input
               class="item__add-cart"
               type="button"
@@ -169,6 +175,7 @@
 
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+    <script src="./script/inputs.js"></script>
     <script src="./script/script.js"></script>
   </body>
 </html>
