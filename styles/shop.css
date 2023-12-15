@@ -202,10 +202,6 @@ select {
 /* Media screen celular */
 
 @media screen and (max-width: 1023px) {
-  .main-funko {
-    padding: var(--spacing-14) 0;
-  }
-
   .main__padding {
     padding: 0 1.2rem;
   }
@@ -222,10 +218,6 @@ select {
   .aside-order__form-select {
     width: 25rem;
     height: 3.5rem;
-  }
-
-  .main-aside {
-    padding: var(--spacing-16) 0;
   }
 }
 
