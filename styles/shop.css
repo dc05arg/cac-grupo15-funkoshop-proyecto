@@ -75,8 +75,12 @@
   /* display: flex; */
   /* o se puede usar grid */
   display: grid;
-  grid-template-columns: 1fr 5fr;
+  grid-template-columns: 1fr 3.5fr;
   padding: var(--spacing-36) 0;
+}
+
+.main__padding {
+  padding: 0 1.4rem;
 }
 
 /* -- Aside --*/
@@ -101,6 +105,7 @@
 .aside-search__input,
 .aside-order__form-select {
   width: 100%;
+  max-width: 20rem;
   height: 3.5rem;
 }
 
@@ -113,6 +118,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  max-width: 20rem;
 }
 
 .aside-price__min-max {
@@ -137,82 +143,16 @@ select {
 
 /* -- Main Funko Group -- */
 
-.main-funko {
-  margin-left: 1rem;
-}
-
 .main-funko-group {
-  width: 100%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
-  row-gap: var(--spacing-36);
-  column-gap: var(--spacing-24);
+  row-gap: var(--spacing-20);
+  column-gap: var(--spacing-14);
 }
 
-.funko-item__img {
-  position: relative;
-  display: flex;
-}
-
-.funko-item__promo-tag {
-  font-size: var(--font-14);
-  text-transform: uppercase;
-  background-color: var(--primary-solid);
-  color: var(--white-font);
-  padding: var(--spacing-8) var(--spacing-12);
-  position: absolute; /* se compacta, pasa de elemento de bloque a elemento de línea */
-  right: 0; /* esto hace que quede a la derecha porque toma el body como padre entonces en .funko-item__img le agregamos un position relative */
-}
-
-/* -- La transición no funciona  */
-/* .funko-item__img > img {
-  transition: 2s ease-in-out;
-} */
-
-.funko-item__img > img {
-  animation: fade 0.8s;
-}
-
-.funko-item__back-img {
-  display: none;
-}
-
-.funko-item__img:hover .funko-item__back-img {
-  display: block;
-}
-
-.funko-item__img:hover .funko-item__front-img {
-  display: none;
-}
-
-.funko-item__info {
-  /* display: flex;
-  flex-direction: column; */
-  /* o se puede usar grid */
-  display: grid;
-  gap: var(--spacing-12);
-  padding: var(--spacing-16);
-}
-
-.funko-item__license {
-  font-size: var(--font-14);
-  font-weight: 500;
-}
-
-.funko-item__model {
-  font-size: var(--font-18);
-  font-weight: 700;
-}
-
-.funko-item__price {
-  font-size: var(--font-16);
-}
-
-.funko-item__financing {
-  font-size: var(--font-14);
-  color: var(--secondary-solid);
-  font-weight: 700;
+.main-funko-item {
+  min-width: 15%;
 }
 
 /* -------------------------------- */
@@ -261,47 +201,44 @@ select {
 
 /* Media screen celular */
 
+@media screen and (max-width: 1023px) {
+  .main-funko {
+    padding: var(--spacing-14) 0;
+  }
+
+  .main__padding {
+    padding: 0 1.2rem;
+  }
+
+  .main {
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .main-funko-group {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .aside-search__input,
+  .aside-order__form-select {
+    width: 25rem;
+    height: 3.5rem;
+  }
+
+  .main-aside {
+    padding: var(--spacing-16) 0;
+  }
+}
+
 @media screen and (max-width: 768px) {
-  .main-funko {
-    max-width: 100vw;
-  }
-
   .main {
     grid-template-columns: 1fr;
   }
 
-  .main-funko-group {
-    max-width: 100vw;
-    grid-template-columns: 1fr;
-  }
-}
-
-@media screen and (max-width: 320px) {
-  .main-funko {
-    max-width: 100vw;
-  }
-
-  .main {
-    grid-template-columns: 1fr;
+  .main__padding {
+    padding: 0 1.2rem;
   }
 
   .main-funko-group {
-    max-width: 100vw;
     grid-template-columns: 1fr;
-  }
-}
-
-/* -------------------------------- */
-
-/* ANIMATION */
-
-/* Animación para las imágenes al hacer :hover */
-
-@keyframes fade {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
   }
 }
