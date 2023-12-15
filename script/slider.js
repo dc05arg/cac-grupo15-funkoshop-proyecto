@@ -152,10 +152,13 @@ document.addEventListener("DOMContentLoaded", function () {
     type: "carousel",
     startAt: 0,
     perView: 3,
-    gap: 15,
+    gap: 0,
     breakpoints: {
-      767: {
+      991: {
         perView: 2,
+      },
+      620: {
+        perView: 1,
       },
     },
   }).mount();

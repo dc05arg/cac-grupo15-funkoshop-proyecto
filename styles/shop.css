@@ -75,7 +75,7 @@
   /* display: flex; */
   /* o se puede usar grid */
   display: grid;
-  grid-template-columns: 1fr 3.5fr;
+  grid-template-columns: 1fr 4fr;
   padding: var(--spacing-36) 0;
 }
 
@@ -147,12 +147,12 @@ select {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
-  row-gap: var(--spacing-20);
-  column-gap: var(--spacing-14);
+  /* row-gap: var(--spacing-16); */
+  /* column-gap: var(--spacing-12); */
 }
 
 .main-funko-item {
-  min-width: 15%;
+  min-width: 10%;
 }
 
 /* -------------------------------- */
@@ -210,6 +210,10 @@ select {
     grid-template-columns: 1fr 2fr;
   }
 
+  .main-aside {
+    margin-bottom: var(--spacing-12);
+  }
+
   .main-funko-group {
     grid-template-columns: 1fr 1fr;
   }
@@ -221,7 +225,7 @@ select {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .main {
     grid-template-columns: 1fr;
   }
